@@ -1,47 +1,33 @@
 import React from 'react';
-import GlassCard from "@/components/GlassCard";
 import Link from "next/link";
 import Triplet from "@/components/Triplet";
 
 const GenerativeAiUseCase = () => {
     return (
-        <section className={"mt-8 flex flex-col gap-16"} id={"generative-ai"}>
-            <GlassCard
-                className="min-h-[350px] sm:py-8 px-4 md:px-12 flex items-center justify-center backdrop-blur-md bg-white/10 rounded-2xl shadow-lg">
-                <article className="text-center flex flex-col items-center gap-6 justify-center">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">
-            <span className="md:whitespace-nowrap">
-                Delivering tailored LLM&apos;s which solve
-            </span>{" "}
-                        <span className="block">
-                real world problems
-            </span>
-                    </h2>
-                    <p className="max-w-3xl text-zinc-300 text-base">
-                        Revolutionizing Enterprise Solutions with Tailored Language Models, Secure Deployments,
-                        and Unparalleled Support for Solving Real-World Challenges in the AI-driven Era.
-                    </p>
-                </article>
-            </GlassCard>
-
+        <section className={"mt-8 flex flex-col gap-16 space-y-20"} id={"generative-ai"}>
             <div className={"flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16"}>
                 <article className="flex flex-col items-center gap-6">
-                    <h2 className={"text-2xl md:text-3xl lg:text-4xl max-w-lg font-medium"}>
-                        Generative AI made simple
-                    </h2>
-                    <p className={"max-w-2xl text-zinc-400 text-base text-center"}>
-                        It&apos;s time to shift focus from the complexities of generative AI to the
-                        improvement of your product. Here at Newron, we eliminate the fuss and put an end to constant
-                        experimentation, allowing you to begin delivering top-notch services promptly.
-                    </p>
+                    <div className={'flex flex-col sm:flex-row justify-between gap-10 w-full'}>
+                        <h2 className={"text-2xl md:text-3xl lg:text-4xl font-medium"}>
+                            Generative AI made simple
+                        </h2>
+                        <div className={'space-y-6'}>
+                            <p className={"max-w-xl text-zinc-400 text-base"}>
+                                It&apos;s time to shift focus from the complexities of generative AI to the
+                                improvement of your product. Here at Newron, we eliminate the fuss and put an end to
+                                constant
+                                experimentation, allowing you to begin delivering top-notch services promptly.
+                            </p>
 
-                    <Link href={'https://ron.newron.ai'} passHref={true}>
-                        <button className={"btn-secondary font-medium btn-primary"}>
-                            Meet Ron! Our generative AI assistant.
-                        </button>
-                    </Link>
+                            <Link href={'https://ron.newron.ai'} passHref={true}>
+                                <button className={"btn-secondary font-medium btn-primary"}>
+                                    Meet Ron! Our generative AI assistant.
+                                </button>
+                            </Link>
+                        </div>
+                    </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
                         {
                             [
                                 'We ensure agility in the delivery of intelligent data solutions, providing comprehensive support so you can cease going in circles.',

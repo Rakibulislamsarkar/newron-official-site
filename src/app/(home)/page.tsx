@@ -7,12 +7,14 @@ import ComputerVisionUseCase from "@/components/ComputerVisionUseCase";
 import SectionWrapper from "@/components/background/SectionWrapper";
 import Software3UseCase from "@/components/Software3UseCase";
 import NvidiaCard from '@/components/NvidiaCard';
+import ProductHighlight from "@/components/ProductHighlight";
 
 const Page = () => {
     return (
-        <div className="space-y-24">
+        <div className="space-y-30">
             <Hero/>
             <LogoCarousel/>
+            <ProductHighlight />
             <GenerativeAIUseCase/>
             <Divider/>
             <SectionWrapper sectionName={"compVision"}>

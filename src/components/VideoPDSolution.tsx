@@ -4,23 +4,27 @@ import Triplet from "@/components/Triplet";
 
 const VideoPDSolution = () => {
     return (
-        <section className={"mt-8 flex flex-col gap-16"}>
+        <section className={"pt-20 flex flex-col gap-16"}>
             <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16">
                 <article className="flex flex-col items-center gap-6">
-                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium max-w-lg text-center mx-auto">
-                        VideoPD — Smart Personal Discussions
-                    </h2>
-                    <p className="text-base text-zinc-400 max-w-4xl mx-auto text-center">
-                        VideoPD digitizes the critical Personal Discussion process in MSME and retail lending. It
-                        reduces manual inefficiencies, generates audit-ready evidence, and enables faster, standardized
-                        underwriting—all while ensuring compliance and seamless LOS integration.
-                    </p>
+                    <div className={'flex flex-col sm:flex-row justify-between gap-10 w-full'}>
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium">
+                            VideoPD — Smart Personal Discussions
+                        </h2>
+                        <div className={'space-y-6'}>
+                            <p className="text-base text-zinc-400 max-w-xl mx-auto">
+                                VideoPD digitizes the critical Personal Discussion process in MSME and retail lending. It
+                                reduces manual inefficiencies, generates audit-ready evidence, and enables faster, standardized
+                                underwriting—all while ensuring compliance and seamless LOS integration.
+                            </p>
 
-                    <Link href={"/contact-us?cta=computer-vision"}>
-                        <button className={"btn-secondary font-medium btn-primary"}>
-                            Request a VideoPD demo
-                        </button>
-                    </Link>
+                            <Link href={"/contact-us?cta=computer-vision"}>
+                                <button className={"btn-secondary font-medium btn-primary"}>
+                                    Request a VideoPD demo
+                                </button>
+                            </Link>
+                        </div>
+                    </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
                         {[

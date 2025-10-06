@@ -48,27 +48,18 @@ export const metadata: Metadata = {
 export default function AboutPage() {
 
     return (
-        <div className="mt-8 bg-zinc-800/30 backdrop-blur-md border border-zinc-700/50 rounded-lg shadow-xl pb-10">
-
+        <div className="mt-8 pb-10">
             <main className="isolate">
                 <div className="relative isolate -z-10">
                     <div className="mx-auto max-w-7xl px-6 pb-32 pt-8 mt-12">
-                        <div className="flex flex-col items-center">
                             <h1 className="text-4xl text-center font-medium tracking-tight text-zinc-100 sm:text-6xl lg:text-7xl">
                                 We&apos;re <span
                                 className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Newron</span>: <br
                                 className="hidden sm:block"/> Innovating the Landscape of AI
                             </h1>
-                            <p className="text-base text-center max-w-4xl text-zinc-400 mt-10">
-                                We&apos;re Newron, a dynamic and forward-thinking AI startup committed to
-                                revolutionizing the way we interact with technology. Our team is a diverse group of
-                                passionate technologists, researchers, and problem-solvers dedicated to pushing the
-                                boundaries of what&apos;s possible in AI.
-                            </p>
-                        </div>
                     </div>
 
-                    <div className="space-y-10 pb-20">
+                    <div className="pb-20">
                         <div className="hidden md:flex w-full gap-3 overflow-hidden">
                             {[1, 2, 3].map((num) => (
                                 <div key={num} className="flex-1 h-[520px] overflow-hidden">
@@ -96,6 +87,12 @@ export default function AboutPage() {
                                 </div>
                             ))}
                         </div>
+                        <p className="text-lg text-zinc-100 mt-10">
+                            We&apos;re Newron, a dynamic and forward-thinking AI startup committed to
+                            revolutionizing the way we interact with technology. Our team is a diverse group of
+                            passionate technologists, researchers, and problem-solvers dedicated to pushing the
+                            boundaries of what&apos;s possible in AI.
+                        </p>
                     </div>
                 </div>
 

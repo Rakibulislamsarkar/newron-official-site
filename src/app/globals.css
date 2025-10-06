@@ -42,7 +42,7 @@ body {
 }
 
 .btn-primary{
-  @apply bg-[#4A4A4A] text-white rounded-full px-6 py-3;
+  @apply bg-[#2f2f2f] text-white rounded-full px-6 py-3;
 }
 
 .btn-primary-hollow {
