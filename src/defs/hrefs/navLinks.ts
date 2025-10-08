@@ -33,13 +33,13 @@ const  navLinks = {
             primary: false,
             icon: null
         },
-        {
-            displayText: 'Try Ron Now!',
-            href: 'https://ron.newron.ai',
-            id: '/ron',
-            primary: true,
-            icon: null
-        }
+        // {
+        //     displayText: 'Try Ron Now!',
+        //     href: 'https://ron.newron.ai',
+        //     id: '/ron',
+        //     primary: true,
+        //     icon: null
+        // }
     ]
 };
 

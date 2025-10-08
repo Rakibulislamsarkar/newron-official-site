@@ -45,6 +45,7 @@ body {
   @apply bg-[#2f2f2f] text-white rounded-full px-6 py-3;
 }
 
+
 .btn-primary-hollow {
   @apply border border-orange-400 ;
 }

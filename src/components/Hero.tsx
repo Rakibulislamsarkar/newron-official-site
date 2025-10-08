@@ -1,5 +1,4 @@
 import React from 'react';
-import NvidiaPartnerCapsule from "@/components/NvidiaPartnerCapsule";
 import Link from "next/link";
 
 const Hero = () => {
@@ -7,7 +6,7 @@ const Hero = () => {
         <section
             className="min-h-[50vh] flex flex-col items-center justify-center mt-10 bg-zinc-800/30 backdrop-blur-md border border-zinc-700/50 rounded-lg shadow-lg shadow-zinc-100/10 sm:shadow-zinc-900/40 py-28">
             <div className="max-w-5xl mx-auto text-center space-y-8">
-                <NvidiaPartnerCapsule/>
+                {/*<NvidiaPartnerCapsule/>*/}
 
                 <h1 className="text-4xl font-medium tracking-tight text-zinc-100 sm:text-6xl lg:text-7xl">
                     Empowering Enterprises with Generative AI
