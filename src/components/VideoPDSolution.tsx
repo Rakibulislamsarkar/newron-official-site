@@ -4,7 +4,7 @@ import Triplet from "@/components/Triplet";
 
 const VideoPDSolution = () => {
     return (
-        <section className={"pt-20 flex flex-col gap-16"}>
+        <section className={"pt-20 flex flex-col gap-16 mx-auto max-w-8xl px-4 md:px-6 lg:px-10"}>
             <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16">
                 <article className="flex flex-col items-center gap-6">
                     <div className={'flex flex-col sm:flex-row justify-between gap-10 w-full'}>
@@ -19,7 +19,7 @@ const VideoPDSolution = () => {
                             </p>
 
                             <Link href={"/contact-us?cta=computer-vision"}>
-                                <button className={"btn-secondary font-medium btn-primary"}>
+                                <button className={"btn-primary font-medium btn-primary"}>
                                     Request a VideoPD demo
                                 </button>
                             </Link>

@@ -4,6 +4,7 @@ import SolutionsHero from "@/components/SolutionsHero";
 import CrediflowSolution from "@/components/CrediflowSolution";
 import SolutionIntro from "@/components/SolutionIntro";
 import SolutionSummary from "@/components/SolutionSummary";
+import FAQs from "@/components/FAQs";
 
 const Page = () => {
     return (
@@ -13,6 +14,7 @@ const Page = () => {
             <CrediflowSolution/>
             <VideoPDSolution/>
             <SolutionSummary />
+            <FAQs />
         </div>
     );
 };

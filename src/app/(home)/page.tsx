@@ -2,29 +2,26 @@ import React from 'react';
 import Hero from "@/components/Hero";
 import LogoCarousel from '@/components/LogoCarousel';
 import GenerativeAIUseCase from '@/components/GenerativeAIUseCase';
-import Divider from '@/components/Divider';
-import ComputerVisionUseCase from "@/components/ComputerVisionUseCase";
-import SectionWrapper from "@/components/background/SectionWrapper";
-import Software3UseCase from "@/components/Software3UseCase";
-import NvidiaCard from '@/components/NvidiaCard';
 import ProductHighlight from "@/components/ProductHighlight";
+import FAQs from "@/components/FAQs";
 
 const Page = () => {
     return (
         <div className="space-y-30">
             <Hero/>
             <LogoCarousel/>
-            <ProductHighlight />
+            <ProductHighlight/>
             <GenerativeAIUseCase/>
-            <Divider/>
-            <SectionWrapper sectionName={"compVision"}>
-                <ComputerVisionUseCase/>
-            </SectionWrapper>
-            <Divider/>
-            <SectionWrapper sectionName={"software3"}>
-                <Software3UseCase/>
-            </SectionWrapper>
-            <NvidiaCard/>
+            <FAQs/>
+            {/*<Divider/>*/}
+            {/*<SectionWrapper sectionName={"compVision"}>*/}
+            {/*    <ComputerVisionUseCase/>*/}
+            {/*</SectionWrapper>*/}
+            {/*<Divider/>*/}
+            {/*<SectionWrapper sectionName={"software3"}>*/}
+            {/*    <Software3UseCase/>*/}
+            {/*</SectionWrapper>*/}
+            {/*<NvidiaCard/>*/}
         </div>
     );
 };

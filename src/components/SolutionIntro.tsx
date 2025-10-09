@@ -1,5 +1,4 @@
 import React from 'react';
-import GlassCard from "@/components/GlassCard";
 import Image from "next/image";
 
 const services = [
@@ -13,11 +12,12 @@ const services = [
 
 const SolutionIntro = () => {
     return (
-        <div className={'py-20'}>
-           <div className={'space-y-20'}>
-               <h1 className={"text-2xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-zinc-100 max-w-4xl "}>
-                   We partner with clients to craft solutions that are both practical and perfectly suited to their goals.</h1>
-           </div>
+        <div className={'py-20 mx-auto max-w-8xl px-4 md:px-6 lg:px-10'}>
+            <div className={'space-y-20'}>
+                <h1 className={"text-2xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-zinc-100 max-w-4xl "}>
+                    We partner with clients to craft solutions that are both practical and perfectly suited to their
+                    goals.</h1>
+            </div>
             <div className={'flex flex-col lg:flex-row lg:items-center justify-between gap-10 mt-10'}>
                 <div className="xl:w-2/5 w-full flex justify-start items-center mb-10 overflow-hidden">
                     <Image

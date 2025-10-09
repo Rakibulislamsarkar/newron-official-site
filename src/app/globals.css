@@ -8,7 +8,8 @@
  /*--background-end-rgb: 255, 255, 255; */
   --background: #14120B;
   --background-secondary: #FEEAE6;
-  --card: #1B1913;
+  --card: #19171c;
+  --card-foreground-primary: #929996;
 }
 
 @theme inline {
@@ -18,6 +19,7 @@
   --color-foreground-secondary: var(--foreground-secondary);
   --color-foreground-accent: var(--foreground-accent);
   --color-card: var(--card);
+  --color-cardforeground-primary: var(--card-foreground-primary);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,8 +30,9 @@
     --foreground-accent: #52525B;
     --foreground-secondary: #14120B;
     --background: #14120B;
-    --background-secondary: #FEEAE6;
-    --card: #1B1913;
+    --background-secondary: #FEFDFE;
+    --card: #19171c;
+    --card-foreground-primary: #CFCFCF;
   }
 }
 
@@ -54,18 +57,18 @@ body {
 }
 
 .btn-primary{
-  @apply bg-[#2f2f2f] text-white rounded-full px-6 py-3;
+  @apply bg-[#6544F4] text-white rounded-full px-6 py-3;
 }
 
 .btn-outline {
-  @apply  border border-[#2D0C02] text-[#2D0C02] px-4 py-2 text-sm font-medium hover:bg-[#2D0C02] hover:text-white transition ;
+  @apply  border border-[#6544F4] text-[#6544F4] px-4 py-2 text-sm font-medium hover:bg-[#6544F4] hover:text-white transition flex gap-5 rounded-full ;
 }
 
 .btn-secondary{
-  @apply bg-[#EDECEC] hover:bg-[#D7D6D5] text-black rounded-full px-6 py-3 ;
+  @apply bg-[#EDECEC] hover:bg-[#D7D6D5] text-[#7C3AED] rounded-full px-6 py-3 ;
 }
 .heading{
-@apply text-foreground-secondary
+@apply
 text-[2rem] sm:text-[2.75rem] md:text-[3.5rem]
 font-normal
 leading-[1.15] sm:leading-[1.1] md:leading-[1]
@@ -73,7 +76,7 @@ tracking-[-0.02em];
 }
 
 .description {
-  @apply  text-foreground-secondary
+  @apply
   text-[1rem] sm:text-[0.9rem] md:text-[1rem] lg:text-[1.2rem]
   max-w-2xl
   text-balance;

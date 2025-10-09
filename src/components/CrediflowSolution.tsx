@@ -4,7 +4,7 @@ import Triplet from "@/components/Triplet";
 
 const CrediflowSolution = () => {
     return (
-        <section className={'space-y-20'}>
+        <section className={'space-y-20 mx-auto max-w-8xl px-4 md:px-6 lg:px-10'}>
             <div className={"flex flex-col gap-16"}>
                 <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16">
                     <article className="flex flex-col sm:flex-row justify-between gap-10 w-full">
@@ -19,7 +19,7 @@ const CrediflowSolution = () => {
                             </p>
 
                             <Link href={"/contact-us?cta=computer-vision"}>
-                                <button className={"btn-secondary font-medium btn-primary"}>
+                                <button className={"btn-primary font-medium btn-primary"}>
                                     Request a CrediFlow demo
                                 </button>
                             </Link>

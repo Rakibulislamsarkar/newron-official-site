@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const NvidiaCard = () => {
     return (
-        <section className="flex flex-col md:flex-row items-center justify-between backdrop-blur-lg rounded-2xl shadow-lg gap-6">
+        <section className="flex flex-col md:flex-row items-center justify-between backdrop-blur-lg rounded-2xl shadow-lg gap-6 mx-auto max-w-8xl px-4 md:px-6 lg:px-10">
             <div className="flex items-center justify-center bg-white rounded-xl shadow-md p-4 w-40 md:w-56">
                 <Image
                     src="/logo/nvidia-green.png"

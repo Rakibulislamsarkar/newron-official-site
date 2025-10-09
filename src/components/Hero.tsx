@@ -52,7 +52,7 @@ const Hero = () => {
                         <div className="flex items-start lg:items-center">
                             <Link href="/contact-us?cta=talk-to-expert" prefetch={true}>
                                 <button
-                                    className="btn-secondary flex items-center justify-between gap-4 px-6 py-4 lg:px-8 text-base font-medium hover:bg-opacity-90 transition-all w-fit">
+                                    className="btn-primary flex items-center justify-between gap-4 px-6 py-4 lg:px-8 text-base font-medium hover:bg-opacity-90 transition-all w-fit">
                                     Talk to AI expert
                                     <ArrowUpRightIcon className="w-6 h-6 stroke-[1]"/>
                                 </button>

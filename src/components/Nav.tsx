@@ -85,8 +85,8 @@ const Nav = () => {
                                                     className={clsx(
                                                         "relative inline-flex items-center gap-x-1.5 px-3 py-2 text-xs sm:text-sm font-medium rounded-md",
                                                         {
-                                                            "btn-primary": link.primary,
-                                                            "btn-secondary hidden lg:block": !link.primary,
+                                                            "btn-secondary": link.primary,
+                                                            "btn-primary hidden lg:block": !link.primary,
                                                         }
                                                     )}
                                                 >

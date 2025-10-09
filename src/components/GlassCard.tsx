@@ -9,7 +9,7 @@ export type GlassCardProps = {
 const GlassCard = ({children, className}: GlassCardProps) => {
     return (
         <div className={clsx(
-            "bg-zinc-700/30 backdrop-blur-md border border-zinc-700/50 rounded-lg shadow-xl",
+            "bg-zinc-800/40  border border-zinc-700/50 rounded-2xl shadow-xl",
             className
         )}>
             {children}

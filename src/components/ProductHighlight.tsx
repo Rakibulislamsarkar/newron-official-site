@@ -16,15 +16,15 @@ const ProductHighlight = () => {
 
                 <div className="w-full md:w-1/2 flex flex-col gap-4">
                     <div
-                        className="text-[#E04A2E] uppercase text-sm tracking-wider font-medium flex items-center gap-2">
+                        className="text-[#7C3AED] uppercase text-sm tracking-wider font-medium flex items-center gap-2">
                         AI-Powered Innovation
                     </div>
 
-                    <h2 className="heading">
+                    <h2 className="heading text-foreground-secondary">
                         Transforming Businesses with Tailored AI Solutions
                     </h2>
 
-                    <p className="description">
+                    <p className="description text-foreground-secondary">
                         We deliver enterprise-grade language models designed to tackle real-world challenges.
                         From secure deployments to custom integrations, our solutions empower organizations to
                         automate processes, enhance decision-making, and accelerate growth in the AI era.
@@ -32,7 +32,7 @@ const ProductHighlight = () => {
 
                     <div className="flex gap-3 pt-4">
                         <button
-                            className="border border-[#E04A2E] text-[#E04A2E] px-4 py-2 text-sm font-medium hover:bg-[#E04A2E] hover:text-white transition flex gap-5 rounded-full">
+                            className="btn-outline">
                             Discover Our Solutions
                             <ArrowUpRightIcon width={20} height={20} />
                         </button>
