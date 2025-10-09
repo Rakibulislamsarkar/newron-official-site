@@ -20,7 +20,7 @@ const Nav = () => {
             >
                 {({open}) => (
                     <>
-                        <div className="mx-auto max-w-7xl px-2 md:px-6 lg:px-10">
+                        <div className="mx-auto max-w-8xl px-2 md:px-6 lg:px-10">
                             <div className="flex h-16 items-center justify-between">
                                 <div className="flex items-center flex-shrink-0 gap-2">
                                     <Link
@@ -35,20 +35,20 @@ const Nav = () => {
                                             height={30}
                                             alt="Newron.ai - logo"
                                         />
-                                        <span className="font-semibold text-indigo-400 text-lg block sm:hidden">
-                                            Newron.ai
-                                        </span>
-                                        <div className="flex items-center gap-2 bg-[#2f2f2f] text-white rounded-full px-4 py-2 text-xs w-fit">
-                                            <span>Newron is now an official partner of</span>
-                                            <span className="flex items-center bg-gradient-to-b from-[#76B900] to-[#4A7A00] px-2 py-1 rounded-l-full rounded-tr-full">
-                                                <Image
-                                                    src="/logo/nvidia-small.png"
-                                                    alt="Nvidia Official Delivery Partner"
-                                                    width={80}
-                                                    height={30}
-                                                />
-                                            </span>
-                                        </div>
+                                        {/*<span className="font-semibold text-indigo-400 text-lg block md:hidden">*/}
+                                        {/*    Newron.ai*/}
+                                        {/*</span>*/}
+                                        {/*<div className="flex items-center gap-2 bg-[#2f2f2f] text-white rounded-full px-4 py-2 text-xs w-fit">*/}
+                                        {/*    <span>Newron is now an official partner of</span>*/}
+                                        {/*    <span className="flex items-center bg-gradient-to-b from-[#76B900] to-[#4A7A00] px-2 py-1 rounded-l-full rounded-tr-full">*/}
+                                        {/*        <Image*/}
+                                        {/*            src="/logo/nvidia-small.png"*/}
+                                        {/*            alt="Nvidia Official Delivery Partner"*/}
+                                        {/*            width={60}*/}
+                                        {/*            height={20}*/}
+                                        {/*        />*/}
+                                        {/*    </span>*/}
+                                        {/*</div>*/}
 
                                     </Link>
                                 </div>
@@ -61,7 +61,7 @@ const Nav = () => {
                                                 href={link.href}
                                                 aria-label={link.displayText}
                                                 className={clsx(
-                                                    "inline-flex items-center text-gray-300 hover:text-gray-200 px-1 pt-1 text-sm font-medium transition-colors border-b-2 border-transparent",
+                                                    "inline-flex items-center text-white hover:text-neutral-300 px-1 pt-1 text-sm font-medium transition-colors border-b-2 border-transparent",
                                                     {
                                                         "border-indigo-500 text-gray-100":
                                                             pathName === link.href,

@@ -1,30 +1,66 @@
 import React from 'react';
 import Link from "next/link";
+import {ArrowUpRightIcon} from "@heroicons/react/16/solid";
+import Image from "next/image";
 
 const Hero = () => {
     return (
-        <section
-            className="min-h-[50vh] flex flex-col items-center justify-center mt-10 bg-zinc-800/30 backdrop-blur-md border border-zinc-700/50 rounded-lg shadow-lg shadow-zinc-100/10 sm:shadow-zinc-900/40 py-28">
-            <div className="max-w-5xl mx-auto text-center space-y-8">
-                {/*<NvidiaPartnerCapsule/>*/}
+        <section className=" flex pt-4 md:pt-10">
+            <div className="w-full flex flex-col justify-between h-[70vh] mx-auto max-w-8xl px-4 md:px-6 lg:px-10">
+                <div className="w-full h-full gap-12 lg:gap-16 xl:gap-20 flex flex-col justify-between items-start">
+                    <div>
+                        <h1 className="
+                            font-normal
+                            leading-[1.1]
+                            text-[clamp(3.4rem,9vw,9.5rem)]
+                            tracking-[-2px]
+                            sm:tracking-[-3px]
+                            md:tracking-[-4px]
+                            lg:tracking-[-6px]
+                            ">
+                            Empowering Enterprises with Generative AI
 
-                <h1 className="text-4xl font-medium tracking-tight text-zinc-100 sm:text-6xl lg:text-7xl">
-                    Empowering Enterprises with Generative AI
-                </h1>
+                        </h1>
+                        <p className="flex items-center">
+                            Official Partner of
+                            <span className="flex items-center ">
+                                                <Image
+                                                    src="/logo/nvidia.png"
+                                                    alt="Nvidia Official Delivery Partner"
+                                                    width={40}
+                                                    height={20}
+                                                />
+                                            </span>
+                            <span className={'bg-lime-400 bg-clip-text text-transparent'}>nvidia</span>
+                        </p>
+                    </div>
 
-                <p className="text-base text-zinc-400 max-w-2xl mx-auto">
-                    Revolutionizing Enterprises with Cutting-Edge Generative AI Solutions for Informed Decision-making,
-                    Enhanced Productivity, and Sustainable Growth in the Digital Era.
-                </p>
+                    <div className="flex w-full justify-between flex-col lg:flex-row gap-8 lg:gap-12">
+                        <p
+                            className="
+                            text-[1rem]
+                            sm:text-[0.8rem]
+                            md:text-[1rem]
+                            lg:text-[1.2rem]
+                            max-w-2xl
+                            text-balance
+                            ">
+                            Redefining enterprise performance through autonomous, insight-driven generative AI
+                            solutions.
+                        </p>
 
-                <Link href="/contact-us?cta=talk-to-expert" prefetch={true}>
-                    <button
-                        className="btn-primary px-6 py-3 md:px-8 text-sm font-medium hover:bg-opacity-90 transition-all">
-                        Talk to AI expert
-                    </button>
-                </Link>
+                        <div className="flex items-start lg:items-center">
+                            <Link href="/contact-us?cta=talk-to-expert" prefetch={true}>
+                                <button
+                                    className="btn-secondary flex items-center justify-between gap-4 px-6 py-4 lg:px-8 text-base font-medium hover:bg-opacity-90 transition-all w-fit">
+                                    Talk to AI expert
+                                    <ArrowUpRightIcon className="w-6 h-6 stroke-[1]"/>
+                                </button>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </section>
     );
 };
