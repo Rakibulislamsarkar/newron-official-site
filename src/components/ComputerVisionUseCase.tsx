@@ -64,7 +64,8 @@ const ComputerVisionUseCase = () => {
 
 
     return (
-        <section className={"py-16 flex flex-col gap-16 mx-auto max-w-8xl px-4 md:px-6 lg:px-10"} id={"computer-vision"}>
+        <section className={"py-16 flex flex-col gap-16 mx-auto max-w-8xl px-4 md:px-6 lg:px-10"}
+                 id={"computer-vision"}>
             <div className={"flex flex-col-reverse md:flex-row-reverse justify-between items-center gap-4"}>
                 <article className="flex flex-col gap-4">
                     <h2 className={"heading"}>
@@ -86,11 +87,12 @@ const ComputerVisionUseCase = () => {
                         your problems into opportunities for growth.
                     </p>
                     <div className={"mt-8"}>
-                        <Link href={"/contact-us?cta=computer-vision"}>
-                            <button className="btn-secondary font-medium flex items-center gap-5">
-                                Talk to us
-                                <ArrowUpRightIcon width={20} height={20}/>
-                            </button>
+                        <Link href={"/contact-us?cta=computer-vision"}
+                              target={"_blank"}
+                              rel="noopener noreferrer"
+                              className="btn-secondary font-medium flex items-center gap-5 w-fit">
+                            Talk to us
+                            <ArrowUpRightIcon width={20} height={20}/>
                         </Link>
                     </div>
                 </article>
@@ -110,15 +112,16 @@ const ComputerVisionUseCase = () => {
                     {!isPlaying && (
                         <div
                             className="absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300"
-                            style={{ opacity: isHovered ? 0 : 1 }}
+                            style={{opacity: isHovered ? 0 : 1}}
                         >
-                            <div className="bg-cyan-300 bg-opacity-40 p-3 rounded-full flex items-center justify-center">
+                            <div
+                                className="bg-cyan-300 bg-opacity-40 p-3 rounded-full flex items-center justify-center">
                                 <svg
                                     className="w-8 h-8 text-white"
                                     fill="currentColor"
                                     viewBox="0 0 20 20"
                                 >
-                                    <path d="M6 4l12 6-12 6V4z" />
+                                    <path d="M6 4l12 6-12 6V4z"/>
                                 </svg>
                             </div>
                         </div>

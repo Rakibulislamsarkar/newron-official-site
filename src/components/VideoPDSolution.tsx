@@ -14,14 +14,16 @@ const VideoPDSolution = () => {
                         </h2>
                         <div className={'space-y-6'}>
                             <p className="description max-w-xl mx-auto">
-                                VideoPD digitizes personal discussions, speeds up underwriting, ensures compliance, and delivers audit-ready records seamlessly.
+                                VideoPD digitizes personal discussions, speeds up underwriting, ensures compliance, and
+                                delivers audit-ready records seamlessly.
                             </p>
 
-                            <Link href={"/contact-us?cta=computer-vision"}>
-                                <button className={"btn-secondary flex items-center justify-center gap-5"}>
-                                    Request a VideoPD demo
-                                    <ArrowUpRightIcon width={20} height={20} />
-                                </button>
+                            <Link href={"/contact-us?cta=computer-vision"}
+                                  target={"_blank"}
+                                  rel="noopener noreferrer"
+                                  className="btn-secondary font-medium flex items-center gap-5 w-fit">
+                                Request a VideoPD demo
+                                <ArrowUpRightIcon width={20} height={20}/>
                             </Link>
                         </div>
                     </div>

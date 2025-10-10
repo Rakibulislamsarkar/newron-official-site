@@ -18,11 +18,12 @@ const CrediflowSolution = () => {
                                 fast, accurate, and compliant credit decisions.
                             </p>
 
-                            <Link href={"/contact-us?cta=computer-vision"}>
-                                <button className={"btn-secondary flex items-center justify-center gap-5"}>
-                                    Request a CrediFlow demo
-                                    <ArrowUpRightIcon width={20} height={20}/>
-                                </button>
+                            <Link href={"/contact-us?cta=computer-vision"}
+                                  target={"_blank"}
+                                  rel="noopener noreferrer"
+                                  className="btn-secondary font-medium flex items-center gap-5 w-fit">
+                                Request a CrediFlow demo
+                                <ArrowUpRightIcon width={20} height={20}/>
                             </Link>
                         </div>
                     </article>

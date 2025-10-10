@@ -23,11 +23,12 @@ const Software3UseCase = () => {
                     {/*    transforming to be more streamlined, cost-efficient, and potent than ever before.*/}
                     {/*</p>*/}
                     <div className="mt-8">
-                        <Link href={"/contact-us?cta=software-3"}>
-                            <button className="btn-secondary font-medium flex items-center gap-5">
+                        <Link href={"/contact-us?cta=software-3"}
+                              target={"_blank"}
+                              rel="noopener noreferrer"
+                              className="btn-secondary font-medium flex items-center gap-5 w-fit">
                                 Talk to us
-                                <ArrowUpRightIcon width={20} height={20} />
-                            </button>
+                                <ArrowUpRightIcon width={20} height={20}/>
                         </Link>
                     </div>
 

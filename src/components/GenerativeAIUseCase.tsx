@@ -20,12 +20,16 @@ const GenerativeAiUseCase = () => {
                             experimentation, allowing you to begin delivering top-notch services promptly.
                         </p>
 
-                        <Link href={'https://ron.newron.ai'} passHref={true}>
-                            <button className={"btn-secondary font-medium flex items-center gap-5"}>
-                                Try Ron
-                                <ArrowUpRightIcon width={20} height={20}/>
-                            </button>
+                        <Link
+                            href="https://ron.newron.ai"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-secondary font-medium flex items-center gap-5 w-fit"
+                        >
+                            Try Ron
+                            <ArrowUpRightIcon width={20} height={20} />
                         </Link>
+
                     </div>
                 </article>
 
