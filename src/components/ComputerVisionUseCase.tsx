@@ -1,20 +1,76 @@
-import React from 'react';
+'use client'
+import React, {useRef, useState} from 'react';
 import Link from "next/link";
 import Triplet from "@/components/Triplet";
-import Image from "next/image";
+import {ArrowUpRightIcon} from "@heroicons/react/16/solid";
 
 // const YoutubeVideo = dynamic(() => import("@/components/YoutubeVideo"), { ssr: false });
 
 
 const ComputerVisionUseCase = () => {
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleMouseEnter = async () => {
+        if (isTouchDevice()) return;
+
+        setIsHovered(true);
+
+        const video = videoRef.current;
+        if (!video || !video.paused) return;
+
+        try {
+            await video.play();
+            setIsPlaying(true);
+        } catch (err) {
+            console.warn("Video play failed:", err);
+        }
+    };
+
+    const handleMouseLeave = () => {
+        if (isTouchDevice()) return;
+
+        setIsHovered(false);
+
+        const video = videoRef.current;
+        if (video && !video.paused) {
+            video.pause();
+            setIsPlaying(false);
+        }
+    };
+
+    const handleClick = async () => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        try {
+            if (video.paused) {
+                await video.play();
+                setIsPlaying(true);
+            } else {
+                video.pause();
+                setIsPlaying(false);
+            }
+        } catch (err) {
+            console.warn("Video play failed:", err);
+        }
+    };
+
+
+    const isTouchDevice = () =>
+        typeof window !== "undefined" &&
+        ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+
+
     return (
-        <section className={"flex flex-col gap-16"} id={"computer-vision"}>
+        <section className={"py-16 flex flex-col gap-16 mx-auto max-w-8xl px-4 md:px-6 lg:px-10"} id={"computer-vision"}>
             <div className={"flex flex-col-reverse md:flex-row-reverse justify-between items-center gap-4"}>
                 <article className="flex flex-col gap-4">
-                    <h2 className={"text-2xl md:text-3xl lg:text-4xl max-w-lg font-medium"}>
-                        Enterprise-Scale Computer Vision
+                    <h2 className={"heading"}>
+                        Computer Vision at Scale
                     </h2>
-                    <p className={"max-w-lg text-zinc-400 text-base"}>
+                    <p className={"max-w-lg description"}>
                         Addressing vision-related issues remains a daunting challenge within the software industry,
                         requiring multi-domain expertise and collaboration. At Newron, we&apos;re equipped with exactly
                         the right resources and have established efficient pipelines to ensure quality model delivery.
@@ -31,53 +87,61 @@ const ComputerVisionUseCase = () => {
                     </p>
                     <div className={"mt-8"}>
                         <Link href={"/contact-us?cta=computer-vision"}>
-                            <button className={"w-full sm:w-1/2 btn-secondary font-medium btn-primary"}>
+                            <button className="btn-secondary font-medium flex items-center gap-5">
                                 Talk to us
+                                <ArrowUpRightIcon width={20} height={20}/>
                             </button>
                         </Link>
                     </div>
                 </article>
-                <div className={'w-full max-w-xs md:max-w-md mb-10'}>
-                    <Image src={"/home/computer-vision.png"} alt={"Computer Vision is one of specialities at NewronAI"}
-                           width={400}
-                           height={400}
+                <div className="relative w-full max-w-md mb-10">
+                    <video
+                        ref={videoRef}
+                        src="/home/computer-vision/Scale.mp4"
+                        muted
+                        loop
+                        playsInline
+                        poster="/home/computer-vision/scale.png"
+                        className="w-full h-auto rounded-2xl shadow-lg object-cover border border-neutral-700 cursor-pointer"
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        onClick={handleClick}
                     />
+                    {!isPlaying && (
+                        <div
+                            className="absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300"
+                            style={{ opacity: isHovered ? 0 : 1 }}
+                        >
+                            <div className="bg-cyan-300 bg-opacity-40 p-3 rounded-full flex items-center justify-center">
+                                <svg
+                                    className="w-8 h-8 text-white"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                >
+                                    <path d="M6 4l12 6-12 6V4z" />
+                                </svg>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
             <Triplet items={[
                 {
+                    header: "Advanced Object Intelligence",
                     title: "Real-Time Object Detection",
-                    content: "Our in-house, custom-developed model takes object detection to the next level. Not only does it identify objects, but it also gauges their distance from the camera with an impressive accuracy of \n" +
-                        "over 97% and all in real time. Remarkably, this groundbreaking model is capable of running on a CPU, enhancing its utility and \n" +
-                        "accessibility.",
-                    img: {
-                        src: "/home/computer-vision/detection.png",
-                        alt: "Intelligent Object Detection and Distance Heatmap Computer Vision Solution for Enterprise Scale Applications",
-                        width: 191,
-                        height: 200,
-                    }
+                    content: "Our custom-built model redefines real-time object detection. It not only recognises objects but also estimates their distance from the camera with over 97% accuracy. Designed for efficiency, this breakthrough system operates seamlessly on a CPU, offering exceptional speed, precision, and accessibility — making high-performance computer vision available to all users and deployment environments.",
                 },
                 {
+                    header: "Comprehensive Scene Understanding",
                     title: "Document & Pose Analysis",
-                    content: "Our custom models are equipped to perform specialised understanding tasks like never before, including human pose and document comprehension. Notably, our models can discern human poses even under potential obscurity and interpret documents, regardless of poor lighting conditions. Experience unparalleled precision and versatility in understanding tasks with our solutions.",
-                    img: {
-                        src: "/home/computer-vision/understanding.png",
-                        alt: "Advanced Document and Human Pose Understanding Computer Vision Solution for Enterprise Scale Applications",
-                        width: 238,
-                        height: 208,
-                    }
+                    content: "Our AI models excel at specialised understanding tasks, including human pose estimation and document comprehension. They can accurately detect body movements even in complex or obscured scenes and interpret documents under challenging conditions like poor lighting. Achieve unmatched reliability and adaptability across multiple analysis tasks with our advanced, domain-optimised solutions.",
                 },
                 {
-                    title: "Cutting-Edge Model Compression",
-                    content: "Leveraging our proprietary pruning and quantisation algorithms, we've achieved the ability to accelerate model performance up to 100 times without compromising accuracy. This can be utilised for \n" +
-                        "deployments on both the edge and the cloud. Our groundbreaking approach enhances the delivery of accurate models in real-time environments, thereby revolutionising efficiency and speed in AI solutions.",
-                    img: {
-                        src: "/home/computer-vision/optimization.png",
-                        alt: "State of the Art Model Compression Computer Vision Solution for Enterprise Scale Applications",
-                        width: 244,
-                        height: 208,
-                    }
-                },
+                    header: "Optimised AI Performance",
+                    title: "Smart Model Compression",
+                    content: "Through proprietary pruning and quantisation techniques, we accelerate model performance by up to 100 times without sacrificing accuracy. Suitable for both edge and cloud environments, our compression technology enables faster inference, reduced latency, and improved scalability — setting a new standard for efficient, real-time AI deployment in modern production pipelines.",
+                }
+
             ]}
                      variant={"secondary"}
             />

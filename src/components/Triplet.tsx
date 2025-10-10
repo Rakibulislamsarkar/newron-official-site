@@ -20,11 +20,11 @@ const Triplet = ({ items }: TripletProps = { variant: "primary" }) => {
                         key={item.header || index}
                         className="relative flex flex-col justify-between gap-4 p-6 lg:p-8 flex-grow basis-0 bg-zinc-800/30 rounded-lg">
                         <div className="flex-1 !space-y-4 sm:mb-6">
-                            <h2 className="text-base text-zinc-200">{item.header}</h2>
+                            <h2 className="text-base text-foreground-muted">{item.header}</h2>
                             <h3 className="text-2xl md:text-3xl font-medium text-white">
                                 {item.title}
                             </h3>
-                            <p className="xs:text-[0.95rem] md:text-[1rem] text-zinc-300">
+                            <p className="text-zinc-300 text-base">
                                 {item.content}
                             </p>
                             <div>{item.action}</div>

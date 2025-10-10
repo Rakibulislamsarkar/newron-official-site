@@ -18,10 +18,10 @@ const Hero = () => {
                             md:tracking-[-4px]
                             lg:tracking-[-6px]
                             ">
-                            Empowering Enterprises with Generative AI
+                            Empowering Enterprises with Generative AI .
 
                         </h1>
-                        <p className="flex items-center">
+                        <p className="flex w-fit items-center">
                             Official Partner of
                             <span className="flex items-center ">
                                                 <Image
@@ -52,9 +52,11 @@ const Hero = () => {
                         <div className="flex items-start lg:items-center">
                             <Link href="/contact-us?cta=talk-to-expert" prefetch={true}>
                                 <button
-                                    className="btn-primary flex items-center justify-between gap-4 px-6 py-4 lg:px-8 text-base font-medium hover:bg-opacity-90 transition-all w-fit">
+                                    className="bg-[#6544F4] text-white rounded-full px-3 py-3 flex items-center justify-between gap-4 lg:px-4 text-base font-medium hover:bg-opacity-90 transition-all w-fit">
                                     Talk to AI expert
-                                    <ArrowUpRightIcon className="w-6 h-6 stroke-[1]"/>
+                                    <span className={'rounded-full bg-background-secondary p-3'}>
+                                    <ArrowUpRightIcon width={20} height={20} className={'text-[#6544F4]'} />
+                                </span>
                                 </button>
                             </Link>
                         </div>

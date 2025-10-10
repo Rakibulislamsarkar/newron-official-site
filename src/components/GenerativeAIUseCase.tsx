@@ -6,7 +6,7 @@ import {ArrowUpRightIcon} from "@heroicons/react/16/solid";
 
 const GenerativeAiUseCase = () => {
     return (
-        <section className={"mt-8 flex flex-col gap-16 mx-auto max-w-8xl px-4 md:px-6 lg:px-10"} id={"generative-ai"}>
+        <section className={"py-16 flex flex-col gap-16 mx-auto max-w-8xl px-4 md:px-6 lg:px-10"} id={"generative-ai"}>
             <div className={"flex flex-col md:flex-row items-center gap-10 md:gap-16"}>
                 <article className="flex flex-col gap-6">
                     <h2 className={"heading"}>
@@ -21,7 +21,7 @@ const GenerativeAiUseCase = () => {
                         </p>
 
                         <Link href={'https://ron.newron.ai'} passHref={true}>
-                            <button className={"btn-primary font-medium flex items-center gap-5"}>
+                            <button className={"btn-secondary font-medium flex items-center gap-5"}>
                                 Try Ron
                                 <ArrowUpRightIcon width={20} height={20}/>
                             </button>
@@ -34,21 +34,21 @@ const GenerativeAiUseCase = () => {
                 variant={"primary"}
                 items={[
                     {
-                        header: 'header 1',
-                        title: "Unravel your data like never before!",
-                        content: "Utilise our advanced AI for real-time answers and insights from your data. Merge multiple data sources for in-depth analysis. \n" +
-                            "Predict trends, plot charts, and query your database in a familiar language. Make your data work smarter and faster for you.",
+                        header: 'Intelligent Data Insights',
+                        title: "Unravel data like never before!",
+                        content: "Leverage our advanced AI to get real-time answers and insights from your data. Merge multiple sources for deeper analysis, predict trends, generate visual charts, and query databases using natural language. Empower your team to uncover hidden patterns, automate reporting, and make smarter, faster decisions driven by intelligent data understanding.",
                     },
                     {
-                        header: 'header 2',
+                        header: 'Proactive Opportunity Discovery',
                         title: "Discover new opportunities!",
-                        content: "Discover the potential of Ron CRM, your tool for unearthing valuable customer pipelines from public resources. We've taken the traditional CRM and refined it into a chat-first interface, specifically optimised for proactive discovery. This empowers your business to foresee and seize lucrative opportunities, both within your organisation and in the broader market. ",
+                        content: "Experience the power of Ron CRM — your smart tool for uncovering customer pipelines from public data. Designed as a chat-first interface, it transforms traditional CRM into a proactive discovery engine. Identify high-value prospects, track engagement, and forecast opportunities to help your business anticipate growth and act with strategic precision across every market segment.",
                     },
                     {
-                        header: 'header 3',
+                        header: 'Unified Knowledge Management',
                         title: "Turn data into knowledge!",
-                        content: "Confront the challenge of managing unstructured information like emails, memos, and reports head-on with Ron Assist. This tool consolidates diverse data into a scalable knowledge bank, ensuring organisation-wide understanding and quality control. Transform chaos into clarity and guarantee the coherence of your information flow.",
-                    },
+                        content: "Tackle unstructured information like emails, memos, and reports with Ron Assist. This intelligent system consolidates scattered data into a scalable, searchable knowledge base. Promote organisation-wide clarity, streamline communication, and uphold consistency across all information channels, transforming fragmented details into a single, actionable source of truth for informed decision-making.",
+                    }
+
                 ]}/>
         </section>
     );

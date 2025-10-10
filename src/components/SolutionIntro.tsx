@@ -12,9 +12,9 @@ const services = [
 
 const SolutionIntro = () => {
     return (
-        <div className={'py-20 mx-auto max-w-8xl px-4 md:px-6 lg:px-10'}>
+        <div className={'bg-background-secondary py-20 mx-auto max-w-8xl px-4 md:px-6 lg:px-10'}>
             <div className={'space-y-20'}>
-                <h1 className={"text-2xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-zinc-100 max-w-4xl "}>
+                <h1 className={"text-2xl sm:text-3xl lg:text-4xl font-medium tracking-tight text-foreground-secondary max-w-4xl "}>
                     We partner with clients to craft solutions that are both practical and perfectly suited to their
                     goals.</h1>
             </div>
@@ -30,13 +30,13 @@ const SolutionIntro = () => {
                 </div>
 
                 <div className={'xl:w-1/2 space-y-10'}>
-                    <p className={"max-w-2xl text-zinc-400 text-lg"}>
+                    <p className={"max-w-2xl text-foreground-muted text-lg"}>
                         We provide digital tools for MSME and retail lending, making compliance, risk management, and
                         credit workflows faster, secure, and audit-ready.
                     </p>
                     {services.map((service, index) => (
                         <div key={index} className="border-b border-zinc-600 pb-4">
-                            <p className={'text-base'}>
+                            <p className={'text-base text-foreground-accent'}>
                                 {service}
                             </p>
                         </div>

@@ -3,7 +3,10 @@ import Hero from "@/components/Hero";
 import LogoCarousel from '@/components/LogoCarousel';
 import GenerativeAIUseCase from '@/components/GenerativeAIUseCase';
 import ProductHighlight from "@/components/ProductHighlight";
+import SectionWrapper from "@/components/background/SectionWrapper";
 import FAQs from "@/components/FAQs";
+import ComputerVisionUseCase from "@/components/ComputerVisionUseCase";
+import Software3UseCase from "@/components/Software3UseCase";
 
 const Page = () => {
     return (
@@ -12,15 +15,15 @@ const Page = () => {
             <LogoCarousel/>
             <ProductHighlight/>
             <GenerativeAIUseCase/>
+            <SectionWrapper sectionName={"compVision"} className={'mt-10'}>
+                <ComputerVisionUseCase/>
+            </SectionWrapper>
+            <SectionWrapper sectionName={"software3"}>
+                <Software3UseCase/>
+            </SectionWrapper>
             <FAQs/>
             {/*<Divider/>*/}
-            {/*<SectionWrapper sectionName={"compVision"}>*/}
-            {/*    <ComputerVisionUseCase/>*/}
-            {/*</SectionWrapper>*/}
             {/*<Divider/>*/}
-            {/*<SectionWrapper sectionName={"software3"}>*/}
-            {/*    <Software3UseCase/>*/}
-            {/*</SectionWrapper>*/}
             {/*<NvidiaCard/>*/}
         </div>
     );

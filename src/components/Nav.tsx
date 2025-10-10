@@ -1,10 +1,10 @@
 "use client";
 
 import {Disclosure, DisclosureButton, DisclosurePanel} from "@headlessui/react";
-import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
+import { Bars2Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import navLinks from "@/defs/hrefs/navLinks";
 import Link from "next/link";
-import {usePathname} from "next/navigation";
+import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import Image from "next/image";
 import React from "react";
@@ -18,9 +18,9 @@ const Nav = () => {
                 as="nav"
                 className="bg-zinc-900/30 backdrop-blur-md backdrop-saturate-150 shadow-lg"
             >
-                {({open}) => (
+                {({ open, close }) => (
                     <>
-                        <div className="mx-auto max-w-8xl px-2 md:px-6 lg:px-10">
+                        <div className="mx-auto max-w-8xl px-4 md:px-6 lg:px-10">
                             <div className="flex h-16 items-center justify-between">
                                 <div className="flex items-center flex-shrink-0 gap-2">
                                     <Link
@@ -35,21 +35,9 @@ const Nav = () => {
                                             height={30}
                                             alt="Newron.ai - logo"
                                         />
-                                        {/*<span className="font-semibold text-indigo-400 text-lg block md:hidden">*/}
-                                        {/*    Newron.ai*/}
-                                        {/*</span>*/}
-                                        {/*<div className="flex items-center gap-2 bg-[#2f2f2f] text-white rounded-full px-4 py-2 text-xs w-fit">*/}
-                                        {/*    <span>Newron is now an official partner of</span>*/}
-                                        {/*    <span className="flex items-center bg-gradient-to-b from-[#76B900] to-[#4A7A00] px-2 py-1 rounded-l-full rounded-tr-full">*/}
-                                        {/*        <Image*/}
-                                        {/*            src="/logo/nvidia-small.png"*/}
-                                        {/*            alt="Nvidia Official Delivery Partner"*/}
-                                        {/*            width={60}*/}
-                                        {/*            height={20}*/}
-                                        {/*        />*/}
-                                        {/*    </span>*/}
-                                        {/*</div>*/}
-
+                                        <span className="font-semibold text-indigo-400 text-lg block md:hidden">
+                                            Newron.ai
+                                        </span>
                                     </Link>
                                 </div>
 
@@ -63,8 +51,7 @@ const Nav = () => {
                                                 className={clsx(
                                                     "inline-flex items-center text-white hover:text-neutral-300 px-1 pt-1 text-sm font-medium transition-colors border-b-2 border-transparent",
                                                     {
-                                                        "border-indigo-500 text-gray-100":
-                                                            pathName === link.href,
+                                                        "border-indigo-500 text-gray-100": pathName === link.href,
                                                     }
                                                 )}
                                             >
@@ -75,11 +62,7 @@ const Nav = () => {
 
                                     <div className="flex items-center gap-2">
                                         {navLinks.c2a.map((link) => (
-                                            <Link
-                                                href={link.href}
-                                                key={link.id}
-                                                aria-label={link.displayText}
-                                            >
+                                            <Link href={link.href} key={link.id} aria-label={link.displayText}>
                                                 <button
                                                     type="button"
                                                     className={clsx(
@@ -98,22 +81,19 @@ const Nav = () => {
                                     </div>
                                 </div>
 
-                                {/* Mobile menu button */}
                                 <div className="flex items-center sm:hidden">
-                                    <DisclosureButton
-                                        className="inline-flex items-center justify-center rounded-md p-1 text-gray-400 hover:bg-gray-700 hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                                    <DisclosureButton className="inline-flex items-center justify-center rounded-md p-1 text-gray-100 hover:bg-gray-700 hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                                         <span className="sr-only">Open main menu</span>
                                         {open ? (
-                                            <XMarkIcon className="block h-6 w-6" aria-hidden="true"/>
+                                            <XMarkIcon className="block h-8 w-8" aria-hidden="true" />
                                         ) : (
-                                            <Bars3Icon className="block h-6 w-6" aria-hidden="true"/>
+                                            <Bars2Icon className="block h-8 w-8" aria-hidden="true" />
                                         )}
                                     </DisclosureButton>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Mobile Panel */}
                         <DisclosurePanel className="sm:hidden bg-zinc-900/50 backdrop-blur-sm">
                             <div className="space-y-1 pb-3 pt-2">
                                 {navLinks.center.map((link) => (
@@ -121,6 +101,7 @@ const Nav = () => {
                                         key={link.id || link.href}
                                         href={link.href}
                                         aria-label={link.displayText}
+                                        onClick={() => close()} // close menu automatically
                                         className="block px-4 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-gray-100 transition-colors"
                                     >
                                         {link.displayText}
@@ -135,6 +116,7 @@ const Nav = () => {
                                             href={link.href}
                                             key={link.href}
                                             aria-label={link.displayText}
+                                            onClick={() => close()} // close menu automatically
                                         >
                                             <button
                                                 type="button"

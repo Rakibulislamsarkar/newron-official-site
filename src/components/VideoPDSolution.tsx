@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 import Triplet from "@/components/Triplet";
+import {ArrowUpRightIcon} from "@heroicons/react/16/solid";
 
 const VideoPDSolution = () => {
     return (
@@ -8,19 +9,18 @@ const VideoPDSolution = () => {
             <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16">
                 <article className="flex flex-col items-center gap-6">
                     <div className={'flex flex-col sm:flex-row justify-between gap-10 w-full'}>
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium">
+                        <h2 className="heading">
                             VideoPD — Smart Personal Discussions
                         </h2>
                         <div className={'space-y-6'}>
-                            <p className="text-base text-zinc-400 max-w-xl mx-auto">
-                                VideoPD digitizes the critical Personal Discussion process in MSME and retail lending. It
-                                reduces manual inefficiencies, generates audit-ready evidence, and enables faster, standardized
-                                underwriting—all while ensuring compliance and seamless LOS integration.
+                            <p className="description max-w-xl mx-auto">
+                                VideoPD digitizes personal discussions, speeds up underwriting, ensures compliance, and delivers audit-ready records seamlessly.
                             </p>
 
                             <Link href={"/contact-us?cta=computer-vision"}>
-                                <button className={"btn-primary font-medium btn-primary"}>
+                                <button className={"btn-secondary flex items-center justify-center gap-5"}>
                                     Request a VideoPD demo
+                                    <ArrowUpRightIcon width={20} height={20} />
                                 </button>
                             </Link>
                         </div>
@@ -60,35 +60,21 @@ const VideoPDSolution = () => {
                 variant={"primary"}
                 items={[
                     {
-                        title: "Streamline Personal Discussions with VideoPD",
+                        header: "Digital PD Management",
+                        title: "Streamline Personal Discussions",
                         content: "Capture PD interactions digitally to save time and reduce manual effort. Standardized workflows ensure consistent, audit-ready data for faster underwriting and compliance.",
-                        img: {
-                            src: "/home/gen-ai/growth.png",
-                            alt: "VideoPD digitizing personal discussions for MSME and retail lending",
-                            width: 204,
-                            height: 166
-                        }
                     },
                     {
+                        header: "Identity Verification",
                         title: "Reliable Identity & Document Checks",
                         content: "Automatically match faces and names with submitted documents and IDs. Geo-location tagging and multi-lingual transcription provide accurate, verifiable evidence of PD visits.",
-                        img: {
-                            src: "/home/gen-ai/analysis.png",
-                            alt: "VideoPD verification with face, document, and geo-location checks",
-                            width: 246,
-                            height: 165
-                        }
                     },
                     {
-                        title: "Audit-Ready Reports at Your Fingertips",
+                        header: "Compliant Reporting",
+                        title: "Audit-Ready PD Reports",
                         content: "Generate standardized PD reports and maintain a complete audit trail of officer actions. Integration with your LOS ensures seamless storage and access for regulatory and operational needs.",
-                        img: {
-                            src: "/home/gen-ai/assistance.png",
-                            alt: "VideoPD audit-ready reports and LOS integration",
-                            width: 246,
-                            height: 158
-                        }
-                    },
+                    }
+
                 ]}
             />
         </section>

@@ -72,7 +72,7 @@ const NewsletterSection = () => {
         <aside className={"mx-auto max-w-8xl px-4 md:px-6 lg:px-10"}>
             <div className={'bg-gradient-to-br from-purple-600 to-[#182fff99] rounded-3xl'}>
                 <div className={"min-h-[400px] flex flex-col gap-4 justify-center items-center text-center py-12"}>
-                    <h2 className={"text-4xl md:text-5xl lg:text-6xl font-medium"}>
+                    <h2 className={"text-4xl md:text-5xl lg:text-6xl font-medium max-w-3xs sm:max-w-full"}>
                         Shape the future of AI
                     </h2>
                     <form
@@ -92,13 +92,22 @@ const NewsletterSection = () => {
                                 placeholder="you@example.com"
                             />
                         </div>
-                        <button type={"submit"} disabled={isSendingData}
-                                className={clsx("flex items-center justify-center gap-2 btn-secondary px-4 py-0.5 text-xs sm:text-sm font-medium rounded-r-sm", {"animate-bounce": isSendingData})}>
+                        <button
+                            type="submit"
+                            disabled={isSendingData}
+                            className={clsx(
+                                "flex items-center justify-center gap-2 btn-secondary w-auto shrink-0 px-4 py-0.5 text-xs sm:text-sm font-medium rounded-r-sm",
+                                { "animate-bounce": isSendingData }
+                            )}
+                        >
                             Subscribe
-                            {
-                                isSubscribed && <>d<CheckCircleIcon className={"h-4 w-4 fill-white"}/></>
-                            }
+                            {isSubscribed && (
+                                <>
+                                    <CheckCircleIcon className="h-4 w-4 fill-white" />
+                                </>
+                            )}
                         </button>
+
                     </form>
                     {
                         isSendingFailed || isInvalidEmail &&
