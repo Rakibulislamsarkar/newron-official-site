@@ -50,14 +50,11 @@ const Hero = () => {
                         </p>
 
                         <div className="flex items-start lg:items-center">
-                            <Link href="/contact-us?cta=talk-to-expert" prefetch={true}>
-                                <button
-                                    className="bg-[#6544F4] text-white rounded-full px-3 py-3 flex items-center justify-between gap-4 lg:px-4 text-base font-medium hover:bg-opacity-90 transition-all w-fit">
-                                    Talk to AI expert
-                                    <span className={'rounded-full bg-background-secondary p-3'}>
+                            <Link href="/contact-us?cta=talk-to-expert" prefetch={true} className="bg-[#6544F4] text-white rounded-full px-3 py-3 flex items-center justify-between gap-4 lg:px-4 text-base font-medium hover:bg-opacity-90 transition-all w-fit">
+                                Talk to AI expert
+                                <span className={'rounded-full bg-background-secondary p-3'}>
                                     <ArrowUpRightIcon width={20} height={20} className={'text-[#6544F4]'} />
                                 </span>
-                                </button>
                             </Link>
                         </div>
                     </div>

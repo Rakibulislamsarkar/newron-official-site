@@ -22,9 +22,6 @@ const Page = () => {
                 <Software3UseCase/>
             </SectionWrapper>
             <FAQs/>
-            {/*<Divider/>*/}
-            {/*<Divider/>*/}
-            {/*<NvidiaCard/>*/}
         </div>
     );
 };

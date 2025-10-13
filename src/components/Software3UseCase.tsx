@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Link from "next/link";
 import Triplet from "@/components/Triplet";
@@ -5,30 +6,24 @@ import {ArrowUpRightIcon} from "@heroicons/react/16/solid";
 
 const Software3UseCase = () => {
     return (
-        <section className={"py-16 flex flex-col gap-16 mx-auto max-w-8xl px-4 md:px-6 lg:px-10"} id={"software3"}>
+        <section className={"py-16 flex flex-col gap-16 mx-auto max-w-7xl px-4 md:px-6 lg:px-10"} id={"software3"}>
             <div className={"flex flex-col-reverse md:flex-row justify-between items-center gap-4"}>
                 <article className="flex flex-col gap-4">
                     <h2 className={"heading"}>
                         Delivering Next-Gen <br/>Software 3.0
                     </h2>
-                    <p className={"description max-w-lg"}>
+                    <p className={"description max-w-2xl"}>
                         At Newron, we lead the Software 3.0 evolution, leveraging Large Language Models (LLMs) to
                         advance AI and machine learning. Our approach improves complex data processing while ensuring
                         data privacy, model transparency, and continuous skill growth in this rapidly evolving field.
                     </p>
-
-                    {/*<p className={"max-w-lg text-zinc-400 text-base"}>*/}
-                    {/*    The emergence of Software 3.0, paired with the use of LLM, signals a new age of scalability and*/}
-                    {/*    efficiency in handling intricate software demands. Under our guidance, software development is*/}
-                    {/*    transforming to be more streamlined, cost-efficient, and potent than ever before.*/}
-                    {/*</p>*/}
                     <div className="mt-8">
                         <Link href={"/contact-us?cta=software-3"}
                               target={"_blank"}
                               rel="noopener noreferrer"
                               className="btn-secondary font-medium flex items-center gap-5 w-fit">
-                                Talk to us
-                                <ArrowUpRightIcon width={20} height={20}/>
+                            Build the Future
+                            <ArrowUpRightIcon width={20} height={20}/>
                         </Link>
                     </div>
 

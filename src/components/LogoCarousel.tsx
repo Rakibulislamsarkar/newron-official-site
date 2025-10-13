@@ -4,7 +4,7 @@ import clientLogos from "@/defs/hrefs/clientLogos";
 
 const LogoCarousel = () => {
     return (
-        <section className="mx-auto max-w-8xl px-4 md:px-6 lg:px-10">
+        <section className="mx-auto max-w-7xl px-4 md:px-6 lg:px-10">
             <h2 className="text-sm text-center font-light leading-8 text-white">
                 Trusted every day by world's leading organizations
             </h2>

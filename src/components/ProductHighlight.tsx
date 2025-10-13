@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import {ArrowUpRightIcon} from "@heroicons/react/16/solid";
+import Link from "next/link";
 
 const ProductHighlight = () => {
     return (
@@ -31,15 +32,14 @@ const ProductHighlight = () => {
                     </p>
 
                     <div className="flex gap-3 pt-4">
-                        <button
-                            className="btn-outline">
+                        <Link href="/solutions" className={'btn-outline'}>
                             Discover Our Solutions
                             <ArrowUpRightIcon width={20} height={20} />
-                        </button>
-                        <button
-                            className="border border-[#2D0C02] text-[#2D0C02] px-4 py-2 text-sm font-medium hover:bg-[#2D0C02] hover:text-white transition rounded-full">
+                        </Link>
+                        <Link href={'/contact-us?cta=get-in-touch'}
+                              className="border border-[#2D0C02] text-[#2D0C02] px-4 py-2 text-sm font-medium hover:bg-[#2D0C02] hover:text-white transition rounded-full">
                             Connect with Us
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

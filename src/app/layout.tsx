@@ -1,5 +1,6 @@
 import React from "react";
 import type { Metadata } from 'next';
+import { Toaster } from '@/components/Sooner'
 import clsx from "clsx";
 import localFont from 'next/font/local';
 
@@ -55,6 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </head>
         <body className={clsx(openAISans.className, "text-zinc-200 font-light")}>
         {children}
+        <Toaster />
         {/*<Analytics/>*/}
         </body>
         </html>

@@ -62,20 +62,16 @@ const Nav = () => {
 
                                     <div className="flex items-center gap-2">
                                         {navLinks.c2a.map((link) => (
-                                            <Link href={link.href} key={link.id} aria-label={link.displayText}>
-                                                <button
-                                                    type="button"
-                                                    className={clsx(
-                                                        "relative inline-flex items-center gap-x-1.5 px-3 py-2 text-xs sm:text-sm font-medium rounded-md",
-                                                        {
-                                                            "btn-secondary": link.primary,
-                                                            "btn-primary hidden lg:block": !link.primary,
-                                                        }
-                                                    )}
-                                                >
+                                            <Link href={link.href} key={link.id} aria-label={link.displayText}
+                                                  className={clsx(
+                                                      "relative inline-flex items-center gap-x-1.5 px-3 py-2 text-xs sm:text-sm font-medium rounded-md",
+                                                      {
+                                                          "btn-secondary": link.primary,
+                                                          "btn-primary hidden lg:block": !link.primary,
+                                                      }
+                                                  )}>
                                                     {link.icon}
                                                     {link.displayText}
-                                                </button>
                                             </Link>
                                         ))}
                                     </div>

@@ -44,7 +44,7 @@ const accordionData = [
 const FaQs = () => {
     return (
         <div className={'bg-background-secondary py-20 sm:py-40'}>
-            <article className={"flex flex-col md:flex-row gap-8 md:gap-16 justify-between mx-auto max-w-8xl px-4 md:px-6 lg:px-10"}>
+            <article className={"flex flex-col md:flex-row gap-8 md:gap-16 justify-between mx-auto max-w-7xl px-4 md:px-6 lg:px-10"}>
                 <div className={'flex flex-col gap-8'}>
                     <h2 className={"text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-foreground-secondary"}>
                         Custom LLM <br/>for each business

@@ -1,10 +1,10 @@
 import React from 'react'
 import navigationLinks from "@/defs/hrefs/navigationLinks";
-import Image from "next/image";
 
 const Footer = () => {
     return (
-        <footer className="mt-12 bg-transparent border border-t-zinc-800 border-x-0 border-b-0 " aria-labelledby="footer-heading">
+        <footer className="mt-12 bg-transparent border border-t-zinc-800 border-x-0 border-b-0 "
+                aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
@@ -12,25 +12,19 @@ const Footer = () => {
                 <div className="xl:grid xl:grid-cols-3 xl:gap-20">
                     <div className="space-y-8">
                         <div className={"space-y-8"}>
-                            {/*<Image*/}
-                            {/*    className="h-16"*/}
-                            {/*    src="/newron-logo.svg"*/}
-                            {/*    width={100}*/}
-                            {/*    height={100}*/}
-                            {/*    alt="NewronAI"*/}
-                            {/*/>*/}
                             <div className={"text-2xl md:text-3xl lg:text-4xl max-w-lg font-medium"}>
                                 NewronAI Technologies Pvt. Ltd.
                             </div>
                         </div>
                         <p className="text-base text-gray-400 max-w-xl">
-                            Revolutionizing Enterprises with Cutting-Edge Data-driven Intelligence Solutions for Informed Decision-making, Enhanced Productivity, and Sustainable Growth in the Digital Era.
+                            Revolutionizing Enterprises with Cutting-Edge Data-driven Intelligence Solutions for
+                            Informed Decision-making, Enhanced Productivity, and Sustainable Growth in the Digital Era.
                         </p>
                         <div className="flex space-x-6">
                             {navigationLinks.social.map((item) => (
                                 <a key={item.name} href={item.href} className="text-gray-100">
                                     <span className="sr-only">{item.name}</span>
-                                    <item.icon className="h-8 w-8" aria-hidden="true" />
+                                    <item.icon className="h-8 w-8" aria-hidden="true"/>
                                 </a>
                             ))}
                         </div>
@@ -91,7 +85,8 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-                    <p className="text-base leading-5 text-zinc-100">&copy; {new Date().getFullYear()} NewronAI Technologies Pvt. Ltd. All rights reserved.</p>
+                    <p className="text-base leading-5 text-zinc-100">&copy; {new Date().getFullYear()} NewronAI
+                        Technologies Pvt. Ltd. All rights reserved.</p>
                 </div>
             </div>
         </footer>

@@ -64,14 +64,14 @@ const ComputerVisionUseCase = () => {
 
 
     return (
-        <section className={"py-16 flex flex-col gap-16 mx-auto max-w-8xl px-4 md:px-6 lg:px-10"}
+        <section className={"py-16 flex flex-col gap-16 mx-auto max-w-7xl px-4 md:px-6 lg:px-10"}
                  id={"computer-vision"}>
             <div className={"flex flex-col-reverse md:flex-row-reverse justify-between items-center gap-4"}>
                 <article className="flex flex-col gap-4">
                     <h2 className={"heading"}>
                         Computer Vision at Scale
                     </h2>
-                    <p className={"max-w-lg description"}>
+                    <p className={"max-w-2xl description"}>
                         Addressing vision-related issues remains a daunting challenge within the software industry,
                         requiring multi-domain expertise and collaboration. At Newron, we&apos;re equipped with exactly
                         the right resources and have established efficient pipelines to ensure quality model delivery.
@@ -91,7 +91,7 @@ const ComputerVisionUseCase = () => {
                               target={"_blank"}
                               rel="noopener noreferrer"
                               className="btn-secondary font-medium flex items-center gap-5 w-fit">
-                            Talk to us
+                            Scale Vision
                             <ArrowUpRightIcon width={20} height={20}/>
                         </Link>
                     </div>

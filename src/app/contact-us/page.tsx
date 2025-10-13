@@ -1,6 +1,6 @@
 import React from "react";
 import type {Metadata} from "next";
-import ContactUsPage from "@/components/layout/ContactUsPage";
+import ContactUsContent from "@/components/ContactUsContent";
 
 export const metadata: Metadata = {
     title: "Contact Us",
@@ -10,7 +10,7 @@ const Contact = () => {
 
     return (
         <>
-            <ContactUsPage/>
+            <ContactUsContent/>
         </>
     );
 };

@@ -1,9 +1,10 @@
 const navigationLinks = {
     solutions: [
-        { name: 'Ron CRM', href: 'https://ron.newron.ai' },
+        // { name: 'Ron CRM', href: 'https://ron.newron.ai' },
         { name: 'Computer Vision', href: '/#computer-vision' },
         { name: 'Software 3.0', href: '/#software3' },
         { name: 'Generative AI', href: '/#generative-ai' },
+        { name: 'Solutions', href: '/solutions' },
     ],
     support: [
         { name: 'Contact Us', href: '/contact-us' },

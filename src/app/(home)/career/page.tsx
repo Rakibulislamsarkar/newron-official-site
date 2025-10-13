@@ -1,6 +1,7 @@
 import React from 'react';
 import { CheckIcon } from '@heroicons/react/16/solid';
 import Image from "next/image";
+import Link from "next/link";
 
 const benefitCategories = [
     {
@@ -43,7 +44,7 @@ export default function BenefitsSection() {
                     <h1 className="text-4xl text-center font-medium tracking-tight text-zinc-100 sm:text-6xl lg:text-7xl">
                         Develop safe, beneficial AI systems
                     </h1>
-                    <p className="text-base text-center max-w-4xl text-zinc-400">
+                    <p className="text-base text-center max-w-4xl text-zinc-400 mt-5">
                         We're looking for curious minds from a wide range of disciplines and backgrounds.
                     </p>
                 </div>
@@ -101,14 +102,12 @@ export default function BenefitsSection() {
                 <p className="text-lg text-zinc-300 mb-6">
                     Join our team and enjoy these benefits while working on cutting-edge AI solutions
                 </p>
-                <a
-                    href="https://www.linkedin.com/company/82560420/admin/feed/posts/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 text-base font-semibold text-white hover:bg-indigo-500 transition-colors duration-200"
-                >
-                    View Open Roles
-                </a>
+                <Link  href="https://www.linkedin.com/company/82560420/admin/feed/posts/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                className={'btn-primary'}>
+                    View on LinkedIn
+                </Link>
             </div>
         </div>
     );

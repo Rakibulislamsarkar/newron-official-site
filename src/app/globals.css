@@ -60,22 +60,15 @@ body {
 }
 
 .btn-secondary{
-  @apply bg-[#EDECEC] hover:bg-[#D7D6D5] text-[#7C3AED] rounded-full px-6 py-3 ;
+  @apply bg-[#FFFFFF] hover:bg-[#EDECEC] text-[#7C3AED] rounded-full px-6 py-3 ;
 }
 
 .heading{
-@apply
-text-[2rem] sm:text-[2.75rem] md:text-[3.5rem]
-font-normal
-leading-[1.15] sm:leading-[1.1] md:leading-[1]
-tracking-[-0.02em];
+@apply text-[2rem] sm:text-[2.75rem] md:text-[3.5rem] font-normal leading-[1.15] sm:leading-[1.1] md:leading-[1] tracking-[-0.02em];
 }
 
 .description {
-  @apply
-  text-[1rem] sm:text-[0.9rem] md:text-[1rem] lg:text-[1.2rem]
-  max-w-2xl
-  text-balance;
+  @apply text-[1rem] sm:text-[0.9rem] md:text-[1rem] lg:text-[1.2rem] ;
 }
 
 /*.standard-input{*/

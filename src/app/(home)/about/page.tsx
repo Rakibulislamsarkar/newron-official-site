@@ -154,7 +154,7 @@ export default function AboutPage() {
         </div>
         <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-4 gap-y-4 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
             {values.map((value) => (
-                <div key={value.name} className={'border border-blue-800 rounded-xl p-4'}>
+                <div key={value.name} className={'border border-neutral-800 rounded-xl p-6 hover:border-zinc-700 transition-colors'}>
                     <dt className="font-semibold text-zinc-100">{value.name}</dt>
                     <dd className="mt-1 text-zinc-400">{value.description}</dd>
                 </div>
