@@ -16,8 +16,7 @@ const Nav = () => {
         <header className="sticky top-0 z-50">
             <Disclosure
                 as="nav"
-                className="bg-zinc-900/30 backdrop-blur-md backdrop-saturate-150 shadow-lg"
-            >
+                className="backdrop-blur-md backdrop-saturate-150 shadow-lg">
                 {({ open, close }) => (
                     <>
                         <div className="mx-auto max-w-8xl px-4 md:px-6 lg:px-10">

@@ -4,7 +4,7 @@ import TechAccordion from "@/components/TechAccordion";
 
 const CrediflowSolution = () => {
     return (
-        <section className={'space-y-20  px-4 md:px-6 lg:px-10'}>
+        <section className={'space-y-20 px-4 md:px-6 lg:px-10'}>
             <div className={"flex flex-col gap-16 mx-auto max-w-[1536px]"}>
                 <p className={'text-indigo-200'}>Core features</p>
                 <div className="flex flex-col md:flex-row justify-center gap-10 md:gap-16">

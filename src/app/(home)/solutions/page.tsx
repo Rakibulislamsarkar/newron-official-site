@@ -5,13 +5,17 @@ import CrediflowSolution from "@/components/CrediflowSolution";
 import SolutionIntro from "@/components/SolutionIntro";
 import SolutionSummary from "@/components/SolutionSummary";
 import FAQs from "@/components/FAQs";
+import {FeaturesSection} from "@/components/FeatureSection";
 
 const Page = () => {
     return (
         <div className={'space-y-30'}>
-            <SolutionsHero/>
+            <div className={'section-gradient'}>
+                <SolutionsHero/>
+            </div>
             <SolutionIntro/>
             <CrediflowSolution/>
+            <FeaturesSection />
             <VideoPDSolution/>
             <SolutionSummary/>
             <FAQs/>

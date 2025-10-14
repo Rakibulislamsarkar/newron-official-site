@@ -5,7 +5,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/16/solid";
 const SolutionsHero = () => {
     return (
         <section
-            className=" min-h-[60vh] max-w-[1536px] mx-auto flex flex-col justify-end  px-4 md:px-6 lg:px-10 py-16 md:py-24 mt-10">
+            className=" min-h-[65vh] max-w-[1536px] mx-auto flex flex-col justify-end  px-4 md:px-6 lg:px-10 py-16 md:py-24">
             <div className="flex flex-col lg:flex-row lg:items-baseline lg:justify-between gap-10">
                 <h1
                     className="

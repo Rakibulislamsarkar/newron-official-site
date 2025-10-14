@@ -7,6 +7,12 @@
     --foreground-accent: #52525B;
     --foreground-muted: #949494;
     --background: #14120B;
+    --background-gradient: linear-gradient(
+            to bottom,
+            #3A57FC 0%,
+            #1E1A2A 50%,
+            #14120B 100%
+    );
     --background-secondary: #FEEAE6;
     --card: #19171c;
     --card-foreground-primary: #929996;
@@ -14,6 +20,7 @@
 
 @theme inline {
     --color-background: var(--background);
+    --color-background-gradient: var(--background-gradient);
     --color-background-secondary: var(--background-secondary);
     --color-foreground-primary: var(--foreground-primary);
     --color-foreground: rgb(var(--foreground-rgb));
@@ -31,11 +38,25 @@
         --foreground-secondary: #14120B;
         --foreground-muted: #949494;
         --background: #14120B;
+        --background-gradient: linear-gradient(
+                to bottom,
+                #3A57FC 0%,
+                #1E1A2A 50%,
+                #14120B 100%
+        );
         --background-secondary: #FEFDFE;
         --card: #19171c;
         --card-foreground-primary: #CFCFCF;
     }
 }
+
+.section-gradient {
+    background-image: var(--background-gradient);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 
 html {
     scroll-behavior: smooth;
@@ -67,7 +88,7 @@ body {
 }
 
 .heading {
-    @apply text-[2rem] sm:text-[2.75rem] md:text-[3.5rem] font-normal leading-[1.15] sm:leading-[1.1] md:leading-[1] tracking-[-0.02em];
+    @apply text-[2rem] sm:text-[2.75rem] md:text-[3.5rem] leading-[1.15] sm:leading-[1.1] md:leading-[1] tracking-[-0.02em];
 }
 
 .subheading {
