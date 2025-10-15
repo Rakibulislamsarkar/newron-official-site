@@ -6,7 +6,7 @@ import {ArrowUpRightIcon} from "@heroicons/react/16/solid";
 
 const Software3UseCase = () => {
     return (
-        <section className={"py-16 flex flex-col gap-16 mx-auto max-w-7xl px-4 md:px-6 lg:px-10"} id={"software3"}>
+        <section className={"py-16 flex flex-col gap-16 mx-auto max-w-[1536px] px-4 md:px-6 lg:px-10"} id={"software3"}>
             <div className={"flex flex-col-reverse md:flex-row justify-between items-center gap-4"}>
                 <article className="flex flex-col gap-4">
                     <h2 className={"heading"}>

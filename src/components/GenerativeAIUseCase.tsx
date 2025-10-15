@@ -6,7 +6,7 @@ import {ArrowUpRightIcon} from "@heroicons/react/16/solid";
 
 const GenerativeAiUseCase = () => {
     return (
-        <section className={"py-16 flex flex-col gap-16 mx-auto max-w-7xl px-4 md:px-6 lg:px-10"} id={"generative-ai"}>
+        <section className={"py-16 flex flex-col gap-16 mx-auto max-w-[1536px] px-4 md:px-6 lg:px-10"} id={"generative-ai"}>
             <div className={"flex flex-col md:flex-row items-center gap-10 md:gap-16"}>
                 <article className="flex flex-col gap-6">
                     <h2 className={"heading"}>

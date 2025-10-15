@@ -6,13 +6,13 @@ import Image from "next/image";
 const Hero = () => {
     return (
         <section className=" flex pt-4 md:pt-10">
-            <div className="w-full flex flex-col justify-between h-[70vh] mx-auto max-w-8xl px-4 md:px-6 lg:px-10">
+            <div className="w-full flex flex-col justify-between h-[70vh] px-4 md:px-6 lg:px-10">
                 <div className="w-full h-full gap-12 lg:gap-16 xl:gap-20 flex flex-col justify-between items-start">
                     <div>
                         <h1 className="
                             font-normal
                             leading-[1.1]
-                            text-[clamp(3.4rem,9vw,9.5rem)]
+                            text-[clamp(3.4rem,7vw,8.5rem)]
                             tracking-[-2px]
                             sm:tracking-[-3px]
                             md:tracking-[-4px]

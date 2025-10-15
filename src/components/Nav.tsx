@@ -31,11 +31,11 @@ const Nav = () => {
                                         <Image
                                             className="block h-8 w-auto"
                                             src="/newron-logo.svg"
-                                            width={30}
-                                            height={30}
+                                            width={20}
+                                            height={20}
                                             alt="Newron.ai - logo"
                                         />
-                                        <span className="font-semibold text-indigo-400 text-lg block md:hidden">
+                                        <span className="font-semibold text-indigo-400 text-2xl">
                                             Newron.ai
                                         </span>
                                     </Link>

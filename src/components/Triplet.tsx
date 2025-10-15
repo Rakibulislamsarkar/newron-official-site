@@ -5,8 +5,8 @@ export type TripletProps = {
     items?: {
         header?: string,
         title?: string,
-        content?: any,
-        action?: any
+        content?: string,
+        action?: boolean,
     }[],
     variant?: "primary" | "secondary"
 }
@@ -24,7 +24,7 @@ const Triplet = ({ items }: TripletProps = { variant: "primary" }) => {
                             <h3 className="text-2xl md:text-3xl font-medium text-white">
                                 {item.title}
                             </h3>
-                            <p className="text-zinc-300 text-base">
+                            <p className="text-neutral-400 text-base">
                                 {item.content}
                             </p>
                             <div>{item.action}</div>

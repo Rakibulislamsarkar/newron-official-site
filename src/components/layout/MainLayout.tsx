@@ -1,30 +1,26 @@
 import React from 'react';
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { ReactLenis } from "lenis/react";
 
 export type MainLayoutProps = {
-    children: any,
-    announcement?: any,
-    nav?: any
-}
+    children: React.ReactNode;
+    announcement?: React.ReactNode;
+    nav?: React.ReactNode;
+};
 
-const MainLayout = ({children, announcement, nav = <Nav/>}: MainLayoutProps) => {
+const MainLayout = ({ children, announcement, nav = <Nav /> }: MainLayoutProps) => {
     return (
-        <div className={'bg-[#0A0A0A]'}>
-            {
-                announcement &&
-                <aside>
-                    {announcement}
-                </aside>
-            }
-            {nav}
-            <main className={" flex justify-center"}>
-                {
-                    children
-                }
-            </main>
-            <Footer/>
-        </div>
+        <ReactLenis
+            root
+        >
+            <div className="bg-background">
+                {announcement && <aside>{announcement}</aside>}
+                {nav}
+                <main>{children}</main>
+                <Footer />
+            </div>
+        </ReactLenis>
     );
 };
 

@@ -13,8 +13,8 @@ const Page = () => {
             <SolutionIntro/>
             <CrediflowSolution/>
             <VideoPDSolution/>
-            <SolutionSummary />
-            <FAQs />
+            <SolutionSummary/>
+            <FAQs/>
         </div>
     );
 };

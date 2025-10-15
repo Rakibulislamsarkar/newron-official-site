@@ -11,7 +11,9 @@ import Software3UseCase from "@/components/Software3UseCase";
 const Page = () => {
     return (
         <div className="space-y-30">
-            <Hero/>
+           <div className={'max-w-[1536px] mx-auto'}>
+               <Hero/>
+           </div>
             <LogoCarousel/>
             <ProductHighlight/>
             <GenerativeAIUseCase/>

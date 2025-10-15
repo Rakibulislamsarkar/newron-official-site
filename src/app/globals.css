@@ -1,74 +1,81 @@
 @import "tailwindcss";
 
 :root {
-   --foreground-rgb: 237, 236, 236;
-  --foreground-secondary: #14120B;
-  --foreground-accent: #52525B;
-  --foreground-muted: #949494;
-  --background: #14120B;
-  --background-secondary: #FEEAE6;
-  --card: #19171c;
-  --card-foreground-primary: #929996;
+    --foreground-rgb: 237, 236, 236;
+    --foreground-primary: #7C3AED;
+    --foreground-secondary: #14120B;
+    --foreground-accent: #52525B;
+    --foreground-muted: #949494;
+    --background: #14120B;
+    --background-secondary: #FEEAE6;
+    --card: #19171c;
+    --card-foreground-primary: #929996;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-background-secondary: var(--background-secondary);
-  --color-foreground: rgb(var(--foreground-rgb));
-  --color-foreground-secondary: var(--foreground-secondary);
-  --color-foreground-accent: var(--foreground-accent);
-  --color-foreground-muted: var(--foreground-muted);
-  --color-card: var(--card);
-  --color-cardforeground-primary: var(--card-foreground-primary);
+    --color-background: var(--background);
+    --color-background-secondary: var(--background-secondary);
+    --color-foreground-primary: var(--foreground-primary);
+    --color-foreground: rgb(var(--foreground-rgb));
+    --color-foreground-secondary: var(--foreground-secondary);
+    --color-foreground-accent: var(--foreground-accent);
+    --color-foreground-muted: var(--foreground-muted);
+    --color-card: var(--card);
+    --color-cardforeground-primary: var(--card-foreground-primary);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-accent: #52525B;
-    --foreground-secondary: #14120B;
-    --foreground-muted: #949494;
-    --background: #14120B;
-    --background-secondary: #FEFDFE;
-    --card: #19171c;
-    --card-foreground-primary: #CFCFCF;
-  }
+    :root {
+        --foreground-primary: #7C3AED;
+        --foreground-accent: #9A9A9A;
+        --foreground-secondary: #14120B;
+        --foreground-muted: #949494;
+        --background: #14120B;
+        --background-secondary: #FEFDFE;
+        --card: #19171c;
+        --card-foreground-primary: #CFCFCF;
+    }
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background-color: var(--background);
+    color: rgb(var(--foreground-rgb));
+    background-color: var(--background);
 }
 
 .primary-gradient {
-  @apply bg-gradient-to-br from-indigo-800  to-orange-400;
+    @apply bg-gradient-to-br from-indigo-800  to-orange-400;
 }
 
 .secondary-gradient {
-  @apply bg-gradient-to-br from-blue-400 to-indigo-600;
+    @apply bg-gradient-to-br from-blue-400 to-indigo-600;
 }
 
-.btn-primary{
-  @apply bg-[#6544F4] text-white rounded-full px-6 py-3;
+.btn-primary {
+    @apply bg-[#6544F4] text-white rounded-full px-6 py-3;
 }
 
 .btn-outline {
-  @apply  border border-[#6544F4] text-[#6544F4] px-4 py-2 text-sm font-medium hover:bg-[#6544F4] hover:text-white transition flex gap-5 rounded-full ;
+    @apply border border-[#6544F4] text-[#6544F4] px-4 py-2 text-sm font-medium hover:bg-[#6544F4] hover:text-white transition flex gap-5 rounded-full ;
 }
 
-.btn-secondary{
-  @apply bg-[#FFFFFF] hover:bg-[#EDECEC] text-[#7C3AED] rounded-full px-6 py-3 ;
+.btn-secondary {
+    @apply bg-[#FFFFFF] hover:bg-[#EDECEC] text-[#7C3AED] rounded-full px-6 py-3 ;
 }
 
-.heading{
-@apply text-[2rem] sm:text-[2.75rem] md:text-[3.5rem] font-normal leading-[1.15] sm:leading-[1.1] md:leading-[1] tracking-[-0.02em];
+.heading {
+    @apply text-[2rem] sm:text-[2.75rem] md:text-[3.5rem] font-normal leading-[1.15] sm:leading-[1.1] md:leading-[1] tracking-[-0.02em];
+}
+
+.subheading {
+    @apply text-[1.5rem] font-semibold leading-1.5
 }
 
 .description {
-  @apply text-[1rem] sm:text-[0.9rem] md:text-[1rem] lg:text-[1.2rem] ;
+    @apply text-[1rem] sm:text-[0.9rem] md:text-[1rem] lg:text-[1.2rem] ;
 }
 
 /*.standard-input{*/

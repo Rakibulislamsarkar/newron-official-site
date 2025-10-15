@@ -17,7 +17,6 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
         <MainLayout>
             <div className="space-y-24">
                 {children}
-                {/*<CommunityContribution />*/}
                 <NewsletterSection/>
                 <Schema id="companyInfo">
                     {

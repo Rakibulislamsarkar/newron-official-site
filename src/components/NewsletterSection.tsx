@@ -80,7 +80,7 @@ const NewsletterSection = () => {
     };
 
     return (
-        <aside className="mx-auto max-w-7xl px-4 md:px-6 lg:px-10">
+        <aside className="mx-auto max-w-[1536px] px-4 md:px-6 lg:px-10">
             <div className="bg-gradient-to-br from-purple-600 to-[#182fff99] rounded-3xl">
                 <div className="min-h-[400px] flex flex-col gap-4 justify-center items-center text-center py-12">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium max-w-3xs sm:max-w-full">

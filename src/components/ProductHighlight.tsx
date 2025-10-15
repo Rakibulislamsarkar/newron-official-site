@@ -6,7 +6,7 @@ import Link from "next/link";
 const ProductHighlight = () => {
     return (
         <section
-            className="bg-background-secondary mx-auto max-w-8xl px-4 md:px-6 lg:px-10 py-20 sm:py-40">
+            className="bg-background-secondary w-full px-4 md:px-6 lg:px-10 py-20 sm:py-40">
             <div className={'flex flex-col md:flex-row items-center gap-12 max-w-7xl mx-auto'}>
                 <div className="relative flex justify-center items-center w-full md:w-1/2 h-96  overflow-hidden">
                     <Image src={'/home/ai-solutions.jpeg'} alt={'Ai Tailored Solutions'}
