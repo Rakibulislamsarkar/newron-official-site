@@ -27,7 +27,7 @@ const techStack: Tech[] = [
             "Policy-Based Decisioning",
             "Human-in-the-Loop Controls",
         ],
-        image: "/gen_image/1.png",
+        image: "/solutions/idea.svg",
     },
     {
         technology: "Inputs",
@@ -39,7 +39,7 @@ const techStack: Tech[] = [
             "KYC & Credit APIs",
             "CRM/LOS Integration",
         ],
-        image: "/gen_image/2.png",
+        image: "/solutions/input.svg",
     },
     {
         technology: "Outputs",
@@ -51,7 +51,7 @@ const techStack: Tech[] = [
             "Compliance Logs",
             "Audit Trail Metadata",
         ],
-        image: "/gen_image/3.png",
+        image: "/solutions/output.svg",
     },
     {
         technology: "AI Features",
@@ -63,7 +63,7 @@ const techStack: Tech[] = [
             "Geo-Tagging & Sentiment AI",
             "Policy-Rule Automation",
         ],
-        image: "/gen_image/1.png",
+        image: "/solutions/results.svg",
     },
     {
         technology: "Business Impacts",
@@ -75,7 +75,7 @@ const techStack: Tech[] = [
             "Reduced Opex",
             "Scalable, Compliant Lending",
         ],
-        image: "/gen_image/2.png",
+        image: "/solutions/BusinessImpact.svg",
     },
 ];
 
@@ -138,12 +138,12 @@ const TechAccordion = () => {
 
                 <div className="md:w-1/2 justify-center items-center">
                     {activeIndex >= 0 && (
-                        <div className="w-full h-[55vh] relative rounded-lg overflow-hidden shadow-lg">
+                        <div className="w-full h-full relative rounded-lg overflow-hidden shadow-lg">
                             <Image
                                 src={techStack[activeIndex].image}
                                 alt={techStack[activeIndex].technology}
                                 fill
-                                className="object-cover"
+                                className="object-contain"
                                 priority={activeIndex === 0}
                             />
                         </div>

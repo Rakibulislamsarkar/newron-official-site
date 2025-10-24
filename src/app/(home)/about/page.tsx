@@ -118,103 +118,31 @@ export default function AboutPage() {
                     </div>
 
 
-                <div className="flex flex-wrap justify-between gap-12 lg:gap-20 mt-20">
-                    {stats.map((stat) => (
-                        <dl key={stat.label} className="flex flex-col ">
-                            <dd className="text-7xl font-semibold text-[#7C3AED]">
-                                {stat.value}
-                            </dd>
-                            <dt className="mt-2 text-base text-zinc-400">{stat.label}</dt>
-                        </dl>
+                    <div className="flex flex-wrap justify-between gap-12 lg:gap-20 mt-20">
+                        {stats.map((stat) => (
+                            <dl key={stat.label} className="flex flex-col ">
+                                <dd className="text-7xl font-semibold text-[#7C3AED]">
+                                    {stat.value}
+                                </dd>
+                                <dt className="mt-2 text-base text-zinc-400">{stat.label}</dt>
+                            </dl>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="mx-auto max-w-2xl lg:mx-0">
+                    <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-6">Our values</h2>
+                </div>
+                <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-4 gap-y-4 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
+                    {values.map((value) => (
+                        <div key={value.name}
+                             className={'border border-neutral-800 rounded-xl p-6 hover:border-zinc-700 transition-colors'}>
+                            <dt className="font-semibold text-zinc-100">{value.name}</dt>
+                            <dd className="mt-1 text-zinc-400">{value.description}</dd>
+                        </div>
                     ))}
-                </div>
+                </dl>
+            </main>
         </div>
-
-{/*<div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">*/
-}
-{/*    <Image*/
-}
-{/*        src="/gallery/office.jpg"*/
-}
-{/*        alt="office"*/
-}
-{/*        width={700}*/
-}
-{/*        height={400}*/
-}
-{/*        className="w-full object-cover rounded-sm"*/
-}
-{/*    />*/
-}
-{/*</div>*/
-}
-
-        <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-6">Our values</h2>
-        </div>
-        <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-4 gap-y-4 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
-            {values.map((value) => (
-                <div key={value.name} className={'border border-neutral-800 rounded-xl p-6 hover:border-zinc-700 transition-colors'}>
-                    <dt className="font-semibold text-zinc-100">{value.name}</dt>
-                    <dd className="mt-1 text-zinc-400">{value.description}</dd>
-                </div>
-            ))}
-        </dl>
-
-{/* Logo cloud */
-}
-{/*<div className="relative isolate -z-10 mt-32 sm:mt-48">*/
-}
-{/*    <div className="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">*/
-}
-{/*        <svg className="h-[40rem] w-[80rem] flex-none stroke-gray-200" aria-hidden="true">*/
-}
-{/*            <defs>*/
-}
-{/*                <pattern*/
-}
-{/*                    id="e9033f3e-f665-41a6-84ef-756f6778e6fe"*/
-}
-{/*                    width={200}*/
-}
-{/*                    height={200}*/
-}
-{/*                    x="50%"*/
-}
-{/*                    y="50%"*/
-}
-{/*                    patternUnits="userSpaceOnUse"*/
-}
-{/*                    patternTransform="translate(-100 0)"*/
-}
-{/*                >*/
-}
-{/*                    <path d="M.5 200V.5H200" fill="none" />*/
-}
-{/*                </pattern>*/
-}
-{/*            </defs>*/
-}
-{/*            <svg x="50%" y="50%" className="overflow-visible fill-gray-50">*/
-}
-{/*                <path d="M-300 0h201v201h-201Z M300 200h201v201h-201Z" strokeWidth={0} />*/
-}
-{/*            </svg>*/
-}
-{/*            <rect width="100%" height="100%" strokeWidth={0} fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)" />*/
-}
-{/*        </svg>*/
-}
-{/*    </div>*/
-}
-
-{/*</div>*/
-}
-
-
-</main>
-
-
-</div>
-)
+    )
 }
