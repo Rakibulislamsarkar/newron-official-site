@@ -1,20 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
+import React, {useState} from "react";
 import clsx from "clsx";
-import { CheckCircleIcon } from "@heroicons/react/20/solid";
-import { ArrowPathIcon } from "@heroicons/react/24/outline";
-import { toast } from "sonner";
+import {CheckCircleIcon} from "@heroicons/react/20/solid";
+import {ArrowPathIcon} from "@heroicons/react/24/outline";
+import {toast} from "sonner";
 
 const ContactUsContent = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isError, setIsError] = useState(false);
 
-    const handleSubmit = async (event: any) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        const formData = new FormData(event.target);
+        const form = event.currentTarget;
+        const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
         const usp = new URLSearchParams(window.location.search);
         const cta_used = usp.get("cta");
@@ -32,15 +33,18 @@ const ContactUsContent = () => {
             if (res.ok) {
                 setIsSubmitted(true);
                 toast.success("Message sent successfully!", {
-                    description: "Thank you for contacting us. We will get back to you shortly.",
+                    description:
+                        "Thank you for contacting us. We will get back to you shortly.",
                     duration: 5000,
                 });
-                event.target.reset();
+                form.reset();
             } else {
                 setIsError(true);
                 const errorData = await res.json();
                 toast.error("Submission failed", {
-                    description: errorData.message || "There was an error submitting your message. Please try again.",
+                    description:
+                        errorData.message ||
+                        "There was an error submitting your message. Please try again.",
                     duration: 5000,
                 });
             }
@@ -48,13 +52,15 @@ const ContactUsContent = () => {
             console.error(e);
             setIsError(true);
             toast.error("Network error", {
-                description: "Unable to submit your message. Please check your connection and try again.",
+                description:
+                    "Unable to submit your message. Please check your connection and try again.",
                 duration: 5000,
             });
         } finally {
             setIsSubmitting(false);
         }
     };
+
 
     return (
         <section className="py-10 sm:py-24">
@@ -99,7 +105,7 @@ const ContactUsContent = () => {
                                     required
                                     placeholder="Surname"
                                     autoComplete="family-name"
-                                    className="block w-full sm:w-72 rounded-sm border-0 py-3 pl-3 text-gray-100  bg-opacity-50 ring-1 ring-inset ring-neutral-700 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-neutral-600 focus:outline-none sm:text-sm"
+                                    className="block w-full rounded-sm border-0 py-3 pl-3 text-gray-100 bg-opacity-50 ring-1 ring-inset ring-neutral-700 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-neutral-600 focus:outline-none sm:text-sm"
                                 />
                             </div>
                         </div>
@@ -193,13 +199,13 @@ const ContactUsContent = () => {
                     >
                         {isSubmitting ? (
                             <>
-                                <ArrowPathIcon className="h-4 w-4 animate-spin text-white" />
+                                <ArrowPathIcon className="h-4 w-4 animate-spin text-white"/>
                                 <span>Submitting...</span>
                             </>
                         ) : isSubmitted ? (
                             <>
                                 <span>Submitted</span>
-                                <CheckCircleIcon className="h-4 w-4 text-white" />
+                                <CheckCircleIcon className="h-4 w-4 text-white"/>
                             </>
                         ) : (
                             <span>Submit</span>

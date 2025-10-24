@@ -9,13 +9,13 @@ import {FeaturesSection} from "@/components/FeatureSection";
 
 const Page = () => {
     return (
-        <div className={'space-y-30'}>
+        <div className={'space-y-36'}>
             <div className={'section-gradient'}>
                 <SolutionsHero/>
             </div>
             <SolutionIntro/>
             <CrediflowSolution/>
-            <FeaturesSection />
+            <FeaturesSection/>
             <VideoPDSolution/>
             <SolutionSummary/>
             <FAQs/>

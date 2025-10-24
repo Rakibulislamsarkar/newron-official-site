@@ -4,9 +4,8 @@ import TechAccordion from "@/components/TechAccordion";
 
 const CrediflowSolution = () => {
     return (
-        <section className={'space-y-20 px-4 md:px-6 lg:px-10'}>
-            <div className={"flex flex-col gap-16 mx-auto max-w-[1536px]"}>
-                <p className={'text-indigo-200'}>Core features</p>
+        <section className={'px-4 md:px-6 lg:px-10'}>
+            <div className={"flex flex-col gap-16 mx-auto max-w-[1536px] space-y-20"}>
                 <div className="flex flex-col md:flex-row justify-center gap-10 md:gap-16">
                     <article className="flex flex-col items-baseline-last sm:flex-row justify-between gap-10 w-full">
                         <h2 className="heading max-w-2xl">
@@ -35,25 +34,25 @@ const CrediflowSolution = () => {
                             header: "( 01 )",
                             title: "Lead to Login",
                             content:
-                                "Automatically capture and qualify leads using intelligent data extraction and scoring. Crediflow streamlines the transition from potential customer to verified applicant, ensuring no opportunity is lost in the acquisition funnel.",
+                                "Automate the onboarding pipeline from document upload to verified application creation. Crediflow uses LLM-based document classification, mapping, and extraction to identify, validate, and populate data automatically — reducing manual effort by 70% and improving first-time-right rates across underwriting.",
                         },
                         {
                             header: "( 02 )",
                             title: "Login to Sanction",
                             content:
-                                "Analyze loan applications instantly with AI-driven risk assessment and document verification. Crediflow validates applicant information, identifies inconsistencies, and accelerates credit decision-making for faster loan approvals.",
+                                "Instantly verify and enrich applications using AI forensics and computer vision. Crediflow authenticates documents, detects tampering, and enriches data via external APIs — ensuring accurate, fraud-free credit decisions in record time.",
                         },
                         {
                             header: "( 03 )",
                             title: "AI Audit",
                             content:
-                                "Gain full visibility into every lending action through real-time AI auditing. Crediflow monitors loan officer activities, personal discussions, and decision logs to ensure compliance, transparency, and accountability across all processes.",
+                                "Gain 360° visibility and compliance tracking through AI-powered audit trails. Every lending action, PD recording, and decision log is automatically tagged, timestamped, and monitored — guaranteeing audit readiness and regulatory transparency.",
                         },
                         {
                             header: "( 04 )",
                             title: "Disbursal",
                             content:
-                                "Automate and secure the final step of loan processing. Crediflow manages disbursement workflows, validates final approvals, and ensures funds are released efficiently while maintaining complete audit and compliance tracking.",
+                                "Automate post-sanction checks and disbursement workflows with policy-driven validation. Crediflow ensures funds are released securely, approvals are traceable, and compliance data is maintained seamlessly for audits and reporting.",
                         },
                     ]}
                     variant={"primary"}

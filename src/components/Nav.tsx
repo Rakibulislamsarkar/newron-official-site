@@ -16,7 +16,7 @@ const Nav = () => {
         <header className="sticky top-0 z-50">
             <Disclosure
                 as="nav"
-                className="backdrop-blur-md backdrop-saturate-150 shadow-lg">
+                className="backdrop-blur-md backdrop-saturate-150 bg-[#3A57FC]">
                 {({ open, close }) => (
                     <>
                         <div className="mx-auto max-w-8xl px-4 md:px-6 lg:px-10">
@@ -34,7 +34,7 @@ const Nav = () => {
                                             height={20}
                                             alt="Newron.ai - logo"
                                         />
-                                        <span className="font-semibold text-indigo-400 text-2xl">
+                                        <span className="font-semibold text-2xl">
                                             Newron.ai
                                         </span>
                                     </Link>
@@ -65,8 +65,8 @@ const Nav = () => {
                                                   className={clsx(
                                                       "relative inline-flex items-center gap-x-1.5 px-3 py-2 text-xs sm:text-sm font-medium rounded-md",
                                                       {
-                                                          "btn-secondary": link.primary,
-                                                          "btn-primary hidden lg:block": !link.primary,
+                                                          "btn-primary": link.primary,
+                                                          "btn-secondary hidden lg:block": !link.primary,
                                                       }
                                                   )}>
                                                     {link.icon}

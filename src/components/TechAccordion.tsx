@@ -20,53 +20,83 @@ const techStack: Tech[] = [
     {
         technology: "Objectives",
         description:
-            "Automate the end-to-end lending workflow—from lead acquisition to loan disbursal—using AI-driven document processing, fraud detection, and intelligent decisioning. The goal is to minimize manual intervention, improve compliance and accuracy, and achieve faster loan turnaround times.",
-        chips: ["End-to-End Automation", "Compliance-Focused", "Faster TAT", "Human-in-the-Loop"],
+            "Automate the entire lending journey — from lead to disbursal — using AI-driven modules like SmartLogin, Docs Classification, Digital Verification, VideoPD, and AI Audit. The system ensures document integrity, fraud prevention, and end-to-end compliance with minimal manual intervention and maximum efficiency.",
+        chips: [
+            "End-to-End Lending Automation",
+            "AI Workflow Orchestration",
+            "Policy-Based Decisioning",
+            "Human-in-the-Loop Controls",
+        ],
         image: "/gen_image/1.png",
     },
     {
         technology: "Inputs",
         description:
-            "Applicant-provided documents such as ID proofs, bank statements, income proofs, and KYC files serve as key inputs. Additional data comes from CRM and LOS systems, policy rules, and third-party APIs like PAN, Aadhaar, and CIBIL for cross-verification and validation.",
-        chips: ["Data-Driven Inputs", "Multi-Source Validation", "API Integrations", "KYC & Credit Data"],
+            "Key inputs include applicant KYC documents, income proofs, bank statements, and collateral data. Additional inputs flow from CRM and LOS systems, VideoPD interactions, and external APIs such as PAN, Aadhaar, CKYC, and CIBIL for real-time validation and enrichment.",
+        chips: [
+            "Multi-Source Data Ingestion",
+            "VideoPD Capture",
+            "KYC & Credit APIs",
+            "CRM/LOS Integration",
+        ],
         image: "/gen_image/2.png",
     },
     {
         technology: "Outputs",
         description:
-            "The system produces structured, validated datasets from raw documents, enriched applicant profiles, and automated decision flags (e.g., FTR/FTNR or fraud indicators). It also creates application records in the LOS, along with dashboards and audit trails for compliance tracking.",
-        chips: ["Actionable Intelligence", "Structured Data", "Auto-Decision Flags", "Compliance Reports"],
+            "Structured and validated data is generated from raw documents, producing enriched applicant profiles, fraud risk indicators, and auto-decision flags (e.g., FTR/FTNR). Standardized PD reports, compliance logs, and audit metadata are automatically created and stored within the LOS for traceability.",
+        chips: [
+            "Auto-Decision Flags",
+            "Standardized PD Reports",
+            "Compliance Logs",
+            "Audit Trail Metadata",
+        ],
         image: "/gen_image/3.png",
     },
     {
         technology: "AI Features",
         description:
-            "Leverages advanced AI capabilities including document classification, extraction, and validation using LLMs and computer vision. It applies AI forensics for fraud detection, enforces policy-based decision automation, and performs data enrichment through API integrations for real-time contextual insights.",
-        chips: ["Intelligent Automation", "LLM-Powered", "Computer Vision", "Fraud Detection"],
+            "Combines LLM-based document classification and extraction with computer vision, AI forensics, and geo-tagging. VideoPD integrates voice and sentiment analytics, while policy-rule automation and data enrichment APIs ensure faster, context-aware decisioning with fraud prevention built in.",
+        chips: [
+            "LLM-Powered Extraction",
+            "Computer Vision & AI Forensics",
+            "Geo-Tagging & Sentiment AI",
+            "Policy-Rule Automation",
+        ],
         image: "/gen_image/1.png",
     },
     {
         technology: "Business Impacts",
         description:
-            "Delivers 60–80% reduction in manual processing time, significantly boosts first-time-right rates, and improves overall efficiency. Automation cuts operational costs, accelerates loan approvals, enhances fraud prevention, and strengthens compliance confidence throughout the lending lifecycle.",
-        chips: ["High ROI & Efficiency", "Reduced Costs", "Scalable Growth", "Improved Accuracy"],
+            "Achieve up to 80% reduction in manual effort, 90% accuracy improvement, and drastically shorter loan turnaround times. Crediflow enhances compliance visibility, reduces operational costs, and enables scalable, audit-ready lending operations with zero-touch personal discussion management.",
+        chips: [
+            "80% Faster Loan TAT",
+            "90% Accuracy Improvement",
+            "Reduced Opex",
+            "Scalable, Compliant Lending",
+        ],
         image: "/gen_image/2.png",
     },
 ];
+
 
 const TechAccordion = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
         <section className="space-y-20 mt-20">
-            <div className="max-w-3xl">
-                <h2 className="heading">
-                    How Crediflow’s AI Lending Workflow Works
-                </h2>
-                <p className="mt-4 description">
-                    A streamlined process designed to automate document handling, verification, and loan decisioning —
-                    powered by AI and deep integrations.
-                </p>
+            <div className="flex flex-col md:flex-row justify-center gap-10 md:gap-16">
+                <article className="flex flex-col items-baseline-last sm:flex-row justify-between gap-10 w-full">
+                    <h2 className="heading max-w-2xl">
+                        How Crediflow’s AI Lending Workflow Works
+                    </h2>
+                    <div className={'space-y-6'}>
+                        <p className="description max-w-xl mx-auto">
+                            A streamlined process designed to automate document handling, verification, and loan decisioning —
+                            powered by AI and deep integrations.
+                        </p>
+                    </div>
+                </article>
             </div>
 
             <div className="flex flex-col md:flex-row gap-10">
@@ -108,7 +138,7 @@ const TechAccordion = () => {
 
                 <div className="md:w-1/2 justify-center items-center">
                     {activeIndex >= 0 && (
-                        <div className="w-full h-[50vh] relative rounded-lg overflow-hidden shadow-lg">
+                        <div className="w-full h-[55vh] relative rounded-lg overflow-hidden shadow-lg">
                             <Image
                                 src={techStack[activeIndex].image}
                                 alt={techStack[activeIndex].technology}
