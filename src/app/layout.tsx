@@ -51,7 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <meta property="og:url" content="https://www.newron.ai" />
             <meta property="og:type" content="website" />
             <meta property="og:description" content={projectDefs.defaultOgDescription} />
-            <meta property="og:image" content="https://newron.ai/newron-banner.png" />
+            <meta property="og:image" content="https://newron-official-site.vercel.app/og-image.png" />
             <title></title>
         </head>
         <body className={clsx(openAISans.className, "text-zinc-200 font-light")}>
