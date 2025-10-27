@@ -1,10 +1,13 @@
 import React from 'react';
 import BgElements from "@/components/background/BgElements";
 
-const BackgroundLayout = ({children} : any) => {
-    return (
-        <div className={""}>
+interface BackgroundLayoutProps {
+    children: React.ReactNode;
+}
 
+const BackgroundLayout = ({ children }: BackgroundLayoutProps) => {
+    return (
+        <div>
             <div className={"w-screen h-screen fixed -z-10"}>
                 <BgElements />
             </div>

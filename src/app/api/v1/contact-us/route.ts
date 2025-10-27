@@ -7,7 +7,6 @@ import assert from "assert";
 
 const db = getFirestore(firebaseConfig);
 
-
 type UserDetail = {
     fname: string;
     lname: string;
@@ -49,7 +48,6 @@ Newron AI`,
     return sesClient.send(sendEmailCommand);
 };
 
-
 const sendContactUsNotification = async (
     userDetail: UserDetail
 ): Promise<SendEmailCommandOutput> => {
@@ -78,7 +76,6 @@ CTA Used: ${userDetail.cta_used || "-"}`,
 
     return sesClient.send(sendEmailCommand);
 };
-
 
 export async function POST(req: NextRequest) {
     try {
@@ -120,10 +117,19 @@ export async function POST(req: NextRequest) {
             {message: "Contact request submitted successfully."},
             {status: 200}
         );
-    } catch (err: any) {
+    } catch (err: unknown) {
         console.error("POST /contact-us error:", err);
+
+        let errorMessage = "Internal server error.";
+
+        if (err instanceof Error) {
+            errorMessage = err.message;
+        } else if (typeof err === 'string') {
+            errorMessage = err;
+        }
+
         return NextResponse.json(
-            {message: err.message || "Internal server error."},
+            {message: errorMessage},
             {status: 500}
         );
     }

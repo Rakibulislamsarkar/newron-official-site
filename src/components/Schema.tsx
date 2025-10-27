@@ -1,13 +1,18 @@
 import Script from 'next/script';
 
-const Schema = ({ children, id }: any) => {
+interface SchemaProps {
+    children: Record<string, unknown>;
+    id?: string;
+}
 
+const Schema = ({ children, id }: SchemaProps) => {
     const schemaString = JSON.stringify(children);
 
-    return <Script type="application/ld+json" id={id}>
-        {schemaString}
-    </Script>
-
-}
+    return (
+        <Script type="application/ld+json" id={id}>
+            {schemaString}
+        </Script>
+    );
+};
 
 export default Schema;

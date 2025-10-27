@@ -9,7 +9,6 @@ import {toast} from "sonner";
 const ContactUsContent = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const [isError, setIsError] = useState(false);
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -22,7 +21,6 @@ const ContactUsContent = () => {
 
         try {
             setIsSubmitting(true);
-            setIsError(false);
 
             const res = await fetch("/api/v1/contact-us", {
                 method: "POST",
@@ -39,7 +37,6 @@ const ContactUsContent = () => {
                 });
                 form.reset();
             } else {
-                setIsError(true);
                 const errorData = await res.json();
                 toast.error("Submission failed", {
                     description:
@@ -50,7 +47,6 @@ const ContactUsContent = () => {
             }
         } catch (e) {
             console.error(e);
-            setIsError(true);
             toast.error("Network error", {
                 description:
                     "Unable to submit your message. Please check your connection and try again.",
@@ -193,7 +189,7 @@ const ContactUsContent = () => {
                             "btn-primary flex h-12 items-center justify-center gap-2 font-medium",
                             {
                                 "opacity-70 cursor-not-allowed": isSubmitting || isSubmitted,
-                                "bg-green-600 hover:bg-green-700": isSubmitted // Change color when submitted
+                                "bg-green-600 hover:bg-green-700": isSubmitted
                             }
                         )}
                     >
