@@ -42,7 +42,7 @@ const features: Feature[] = [
         description:
             "Digitally capture personal discussions with integrated face matching, voice sentiment analysis, and geo-tagging to ensure authenticity and produce audit-ready behavioral summaries.",
         imgAlt: "Video personal discussion and sentiment AI example",
-        placeholderSrc: "/solutions/VideoPDInsights.jpeg",
+        placeholderSrc: "/solutions/VideoPDinsights.jpeg",
     },
     {
         title: "AI Audit & Compliance Dashboard",
